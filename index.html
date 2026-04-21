@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <script>(function(){try{const s=localStorage.getItem('theme');const d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));}catch(e){}})();</script>
+  <script>(function(){try{var v=localStorage.getItem('view');document.documentElement.setAttribute('data-view',v||'editorial');}catch(e){}})();</script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -20,6 +21,10 @@
         <span class="folio-left">Vol. I — Index of Works</span>
         <span class="folio-right">
           <span class="folio-updated">Updated Apr 2026</span>
+          <button id="view-toggle" class="view-toggle" type="button" aria-label="Toggle editorial and dashboard view">
+            <span class="view-toggle-label" data-view-label="editorial">Dashboard</span>
+            <span class="view-toggle-label" data-view-label="dashboard">Editorial</span>
+          </button>
           <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark theme">
             <span class="theme-toggle-label" data-theme-label="light">Dark</span>
             <span class="theme-toggle-label" data-theme-label="dark">Light</span>
@@ -232,6 +237,148 @@
       </ul>
     </section>
 
+    <!-- ========== DASHBOARD VIEW (minimal) ========== -->
+    <section class="dashboard" aria-label="Site dashboard">
+      <div class="dash-meta">
+        <span class="dash-meta-item">10 sites</span>
+        <span class="dash-sep">·</span>
+        <span class="dash-meta-item">Data from GitHub API</span>
+        <span class="dash-sep">·</span>
+        <span class="dash-meta-item"><span class="dash-status-dot"></span>Cached 1h</span>
+      </div>
+      <div class="dash-head" role="row">
+        <span>#</span>
+        <span>Slug</span>
+        <span>Type</span>
+        <span>Size</span>
+        <span>Updated</span>
+        <span>Description</span>
+        <span>Open</span>
+      </div>
+      <ul class="dash-list">
+        <li class="dash-row" data-repo="idetc-paper-site">
+          <span class="dash-num">01</span>
+          <span class="dash-slug">idetc-paper-site</span>
+          <span class="dash-type">paper</span>
+          <span class="dash-size" data-field="size">—</span>
+          <span class="dash-updated" data-field="updated">—</span>
+          <span class="dash-desc">ASME IDETC 2026 companion — tacit DFM knowledge from unstructured discourse</span>
+          <span class="dash-actions">
+            <a href="https://idetc-paper-site.vercel.app" target="_blank" rel="noopener" title="Live">↗</a>
+            <a href="https://github.com/douglaspmcgowan/idetc-paper-site" target="_blank" rel="noopener" title="Source">src</a>
+          </span>
+        </li>
+        <li class="dash-row" data-repo="web-design-guide">
+          <span class="dash-num">02</span>
+          <span class="dash-slug">web-design-guide</span>
+          <span class="dash-type">essay</span>
+          <span class="dash-size" data-field="size">—</span>
+          <span class="dash-updated" data-field="updated">—</span>
+          <span class="dash-desc">Field guide — why vibe-coded sites look generic, 14 visual vocabularies</span>
+          <span class="dash-actions">
+            <a href="https://web-design-guide-lilac.vercel.app" target="_blank" rel="noopener" title="Live">↗</a>
+            <a href="https://github.com/douglaspmcgowan/web-design-guide" target="_blank" rel="noopener" title="Source">src</a>
+          </span>
+        </li>
+        <li class="dash-row" data-repo="viz-research-hub">
+          <span class="dash-num">03</span>
+          <span class="dash-slug">viz-research-hub</span>
+          <span class="dash-type">reference</span>
+          <span class="dash-size" data-field="size">—</span>
+          <span class="dash-updated" data-field="updated">—</span>
+          <span class="dash-desc">Ways of Thinking — 14 sections, ~200 linked interactive-ideas sources</span>
+          <span class="dash-actions">
+            <a href="https://viz-research-hub.vercel.app" target="_blank" rel="noopener" title="Live">↗</a>
+            <a href="https://github.com/douglaspmcgowan/viz-research-hub" target="_blank" rel="noopener" title="Source">src</a>
+          </span>
+        </li>
+        <li class="dash-row" data-repo="ai-industry-map-explorer">
+          <span class="dash-num">04</span>
+          <span class="dash-slug">ai-industry-map-explorer</span>
+          <span class="dash-type">react</span>
+          <span class="dash-size" data-field="size">—</span>
+          <span class="dash-updated" data-field="updated">—</span>
+          <span class="dash-desc">Zoomable cluster map of the gen-AI tool ecosystem — D3 + starfield</span>
+          <span class="dash-actions">
+            <a href="https://ai-industry-map-explorer.vercel.app" target="_blank" rel="noopener" title="Live">↗</a>
+            <a href="https://github.com/douglaspmcgowan/ai-industry-map-explorer" target="_blank" rel="noopener" title="Source">src</a>
+          </span>
+        </li>
+        <li class="dash-row" data-repo="ai-industry-map">
+          <span class="dash-num">05</span>
+          <span class="dash-slug">ai-industry-map</span>
+          <span class="dash-type">catalog</span>
+          <span class="dash-size" data-field="size">—</span>
+          <span class="dash-updated" data-field="updated">—</span>
+          <span class="dash-desc">Static multi-page guide to gen-AI tooling organized by function</span>
+          <span class="dash-actions">
+            <a href="https://ai-industry-map.vercel.app" target="_blank" rel="noopener" title="Live">↗</a>
+            <a href="https://github.com/douglaspmcgowan/ai-industry-map" target="_blank" rel="noopener" title="Source">src</a>
+          </span>
+        </li>
+        <li class="dash-row" data-repo="terminology-hub">
+          <span class="dash-num">06</span>
+          <span class="dash-slug">terminology-site</span>
+          <span class="dash-type">reference</span>
+          <span class="dash-size" data-field="size">—</span>
+          <span class="dash-updated" data-field="updated">—</span>
+          <span class="dash-desc">Paper Terminology Hub — tag-filtered grid, OpenAI-powered submit</span>
+          <span class="dash-actions">
+            <a href="https://terminology-site.vercel.app" target="_blank" rel="noopener" title="Live">↗</a>
+            <a href="https://github.com/douglaspmcgowan/terminology-hub" target="_blank" rel="noopener" title="Source">src</a>
+          </span>
+        </li>
+        <li class="dash-row" data-repo="dpm-research-hub">
+          <span class="dash-num">07</span>
+          <span class="dash-slug">dpm-research-hub</span>
+          <span class="dash-type">hub</span>
+          <span class="dash-size" data-field="size">—</span>
+          <span class="dash-updated" data-field="updated">—</span>
+          <span class="dash-desc">Research hub — talks, papers, Psych_Battery e-ink sandbox</span>
+          <span class="dash-actions">
+            <a href="https://dpm-research-hub.vercel.app" target="_blank" rel="noopener" title="Live">↗</a>
+            <a href="https://github.com/douglaspmcgowan/dpm-research-hub" target="_blank" rel="noopener" title="Source">src</a>
+          </span>
+        </li>
+        <li class="dash-row" data-repo="dpm5970_digital_garden" data-private="true">
+          <span class="dash-num">08</span>
+          <span class="dash-slug">dpm5970_digital_garden</span>
+          <span class="dash-type">garden</span>
+          <span class="dash-size" data-field="size">private</span>
+          <span class="dash-updated" data-field="updated">private</span>
+          <span class="dash-desc">Digital garden — eternal matters, AI, strategy &amp; 168-hour audit</span>
+          <span class="dash-actions">
+            <a href="https://dpm5970digitalgarden.vercel.app" target="_blank" rel="noopener" title="Live">↗</a>
+            <span class="dash-action-empty" title="Private repo">—</span>
+          </span>
+        </li>
+        <li class="dash-row" data-repo="zahra-portfolio">
+          <span class="dash-num">09</span>
+          <span class="dash-slug">zahra-portfolio</span>
+          <span class="dash-type">portfolio</span>
+          <span class="dash-size" data-field="size">—</span>
+          <span class="dash-updated" data-field="updated">—</span>
+          <span class="dash-desc">Zahra Amos — biology grad, D1 high jumper, Berkeley-based</span>
+          <span class="dash-actions">
+            <a href="https://zahra-portfolio-chi.vercel.app" target="_blank" rel="noopener" title="Live">↗</a>
+            <a href="https://github.com/douglaspmcgowan/zahra-portfolio" target="_blank" rel="noopener" title="Source">src</a>
+          </span>
+        </li>
+        <li class="dash-row" data-repo="zahra-career-hub">
+          <span class="dash-num">10</span>
+          <span class="dash-slug">zahra-career-hub</span>
+          <span class="dash-type">hub</span>
+          <span class="dash-size" data-field="size">—</span>
+          <span class="dash-updated" data-field="updated">—</span>
+          <span class="dash-desc">Career-planning hub — E-3 visa strategy, job resources, action items</span>
+          <span class="dash-actions">
+            <a href="https://zahra-career-hub.vercel.app" target="_blank" rel="noopener" title="Live">↗</a>
+            <a href="https://github.com/douglaspmcgowan/zahra-career-hub" target="_blank" rel="noopener" title="Source">src</a>
+          </span>
+        </li>
+      </ul>
+    </section>
+
     <footer class="colophon">
       <div class="rule-ornament" aria-hidden="true">
         <span>·</span><span>·</span><span>·</span>
@@ -248,6 +395,74 @@
     document.documentElement.setAttribute('data-theme',next);
     try{localStorage.setItem('theme',next);}catch(e){}
   });
+
+  (function(){
+    var btn=document.querySelector('#view-toggle');
+    var hydrated=false;
+    btn.addEventListener('click',function(){
+      var cur=document.documentElement.getAttribute('data-view');
+      var next=cur==='dashboard'?'editorial':'dashboard';
+      document.documentElement.setAttribute('data-view',next);
+      try{localStorage.setItem('view',next);}catch(e){}
+      if(next==='dashboard') hydrate();
+    });
+
+    function fmtSize(kb){
+      if(kb==null) return '—';
+      if(kb<1024) return kb+' KB';
+      return (kb/1024).toFixed(1)+' MB';
+    }
+    function fmtRel(iso){
+      if(!iso) return '—';
+      var diff=Date.now()-new Date(iso).getTime();
+      var m=Math.floor(diff/60000);
+      if(m<1) return 'just now';
+      if(m<60) return m+'m ago';
+      var h=Math.floor(m/60);
+      if(h<24) return h+'h ago';
+      var d=Math.floor(h/24);
+      if(d<30) return d+'d ago';
+      var mo=Math.floor(d/30);
+      if(mo<12) return mo+'mo ago';
+      return Math.floor(d/365)+'y ago';
+    }
+    async function getInfo(repo){
+      var key='site_info_'+repo;
+      try{
+        var c=localStorage.getItem(key);
+        if(c){
+          var p=JSON.parse(c);
+          if(Date.now()-p.ts<3600000) return p.data;
+        }
+      }catch(e){}
+      try{
+        var r=await fetch('https://api.github.com/repos/douglaspmcgowan/'+repo);
+        if(!r.ok) return null;
+        var raw=await r.json();
+        var data={size:raw.size,pushed:raw.pushed_at};
+        try{localStorage.setItem(key,JSON.stringify({data:data,ts:Date.now()}));}catch(e){}
+        return data;
+      }catch(e){ return null; }
+    }
+    async function hydrate(){
+      if(hydrated) return;
+      hydrated=true;
+      var rows=document.querySelectorAll('.dash-row[data-repo]:not([data-private])');
+      for(var i=0;i<rows.length;i++){
+        (function(row){
+          var repo=row.getAttribute('data-repo');
+          getInfo(repo).then(function(info){
+            var sizeEl=row.querySelector('[data-field="size"]');
+            var updEl=row.querySelector('[data-field="updated"]');
+            if(!info){ sizeEl.textContent='—'; updEl.textContent='—'; return; }
+            sizeEl.textContent=fmtSize(info.size);
+            updEl.textContent=fmtRel(info.pushed);
+          });
+        })(rows[i]);
+      }
+    }
+    if(document.documentElement.getAttribute('data-view')==='dashboard') hydrate();
+  })();
   </script>
 </body>
 </html>

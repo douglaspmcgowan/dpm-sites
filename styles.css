@@ -626,6 +626,274 @@ main {
 }
 
 /* ============================================================
+   VIEW TOGGLE (Editorial ↔ Dashboard)
+   ============================================================ */
+.view-toggle {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  background: transparent;
+  border: 1px solid var(--hair);
+  padding: 0.55rem 0.85rem;
+  cursor: pointer;
+  line-height: 1;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.view-toggle:hover,
+.view-toggle:focus-visible {
+  color: var(--accent);
+  border-color: var(--ink-2);
+  outline: none;
+}
+
+.view-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.view-toggle-label { display: none; }
+:root:not([data-view="dashboard"]) .view-toggle-label[data-view-label="editorial"] { display: inline; }
+:root[data-view="dashboard"] .view-toggle-label[data-view-label="dashboard"] { display: inline; }
+
+/* ============================================================
+   DASHBOARD VIEW
+   ============================================================ */
+.dashboard { display: none; }
+
+:root[data-view="dashboard"] .chapter,
+:root[data-view="dashboard"] .toc,
+:root[data-view="dashboard"] .dek,
+:root[data-view="dashboard"] .byline-row,
+:root[data-view="dashboard"] .rule-ornament,
+:root[data-view="dashboard"] .masthead::after { display: none; }
+
+:root[data-view="dashboard"] .masthead {
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--hair);
+}
+
+:root[data-view="dashboard"] .title {
+  font-size: clamp(2rem, 6vw, 3rem);
+  margin-bottom: 0;
+  letter-spacing: -0.03em;
+}
+
+:root[data-view="dashboard"] .folio {
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+:root[data-view="dashboard"] .grain { opacity: calc(var(--grain-opacity) * 0.4); }
+
+:root[data-view="dashboard"] .colophon {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  text-align: left;
+}
+
+:root[data-view="dashboard"] .colo-line {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+  line-height: 1.6;
+}
+
+:root[data-view="dashboard"] .dashboard { display: block; }
+
+.dash-meta {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.dash-meta-item { white-space: nowrap; }
+.dash-sep { color: var(--ink-3); opacity: 0.5; }
+
+.dash-status-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  animation: dashPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes dashPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.dash-head,
+.dash-row {
+  display: grid;
+  grid-template-columns: 2.5rem 13rem 5.5rem 5rem 6rem 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+.dash-head {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding: 0.5rem 0 0.65rem;
+  border-bottom: 1px solid var(--hair);
+}
+
+.dash-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dash-row {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--hair-soft);
+  transition: background 0.12s ease;
+}
+
+.dash-row:hover {
+  background: var(--paper-soft);
+}
+
+.dash-num {
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.78rem;
+}
+
+.dash-slug {
+  color: var(--ink);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dash-type {
+  color: var(--ink-2);
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+}
+
+.dash-size,
+.dash-updated {
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.76rem;
+}
+
+.dash-desc {
+  color: var(--ink-2);
+  font-family: var(--serif);
+  font-size: 0.92rem;
+  font-style: italic;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dash-actions {
+  display: flex;
+  gap: 0.4rem;
+  justify-self: end;
+}
+
+.dash-actions a,
+.dash-action-empty {
+  color: var(--ink);
+  text-decoration: none;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid var(--hair);
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+  font-size: 0.72rem;
+  line-height: 1;
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dash-actions a:hover,
+.dash-actions a:focus-visible {
+  border-color: var(--ink);
+  color: var(--accent);
+  outline: none;
+}
+
+.dash-action-empty {
+  color: var(--ink-3);
+  cursor: default;
+  font-style: italic;
+}
+
+/* Mobile dashboard — stack rows */
+@media (max-width: 900px) {
+  .dash-head { display: none; }
+
+  .dash-row {
+    display: grid;
+    grid-template-columns: 2rem 1fr auto;
+    grid-template-areas:
+      "num slug    actions"
+      "num type    type"
+      "num size    size"
+      "num updated updated"
+      "num desc    desc";
+    column-gap: 0.75rem;
+    row-gap: 0.25rem;
+    padding: 0.95rem 0;
+  }
+
+  .dash-num { grid-area: num; align-self: start; padding-top: 0.15rem; }
+  .dash-slug { grid-area: slug; font-size: 0.88rem; white-space: normal; }
+  .dash-actions { grid-area: actions; align-self: start; }
+
+  .dash-type,
+  .dash-size,
+  .dash-updated {
+    font-size: 0.7rem;
+    color: var(--ink-3);
+  }
+  .dash-type { grid-area: type; margin-top: 0.2rem; }
+  .dash-size { grid-area: size; }
+  .dash-updated { grid-area: updated; }
+
+  .dash-desc {
+    grid-area: desc;
+    white-space: normal;
+    font-size: 0.86rem;
+    line-height: 1.4;
+    margin-top: 0.3rem;
+  }
+}
+
+/* ============================================================
    PRINT (just in case)
    ============================================================ */
 @media print {
