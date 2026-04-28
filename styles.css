@@ -510,6 +510,15 @@ main {
   padding-left: 0.5rem;
 }
 
+.card-date {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--ink-3);
+  margin-left: auto;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
 /* ============================================================
    COLOPHON
    ============================================================ */
