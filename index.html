@@ -658,9 +658,15 @@
       <div class="dash-meta">
         <span class="dash-meta-item">16 sites</span>
         <span class="dash-sep">·</span>
-        <span class="dash-meta-item">Data from GitHub API</span>
+        <span class="dash-meta-item">6 projects</span>
         <span class="dash-sep">·</span>
-        <span class="dash-meta-item"><span class="dash-status-dot"></span>Cached 1h</span>
+        <span class="dash-meta-item">7 skills</span>
+        <span class="dash-sep">·</span>
+        <span class="dash-meta-item">7 hooks</span>
+        <span class="dash-sep">·</span>
+        <span class="dash-meta-item">GitHub API</span>
+        <span class="dash-sep">·</span>
+        <span class="dash-meta-item"><span class="dash-status-dot"></span>Updated daily</span>
       </div>
       <div class="dash-head" role="row">
         <span>#</span>
@@ -865,6 +871,195 @@
           </span>
         </li>
       </ul>
+
+      <!-- ═══ PROJECTS PANEL ═══ -->
+      <div class="db-section">
+        <div class="db-section-head">
+          <span class="db-section-title">Projects</span>
+          <span class="db-section-count">6 tracked · <span class="dash-status-dot"></span> status from <span class="mono">project-status.json</span></span>
+        </div>
+        <div class="db-proj-head" role="row">
+          <span>#</span>
+          <span>Status</span>
+          <span>Project</span>
+          <span>Layer</span>
+          <span>Current goal</span>
+          <span>Last commit</span>
+          <span>Open</span>
+        </div>
+        <ul class="db-list">
+          <li class="db-proj-row">
+            <span class="dash-num">01</span>
+            <span><span class="status-pill status-pill--active">Active</span></span>
+            <span class="dash-slug">psych-battery-app</span>
+            <span class="dash-type">Instrument</span>
+            <span class="db-proj-goal">Full data integration with ActivityWatch + CrowPanel e-ink display</span>
+            <span class="dash-updated proj-last-commit" data-repo="psych-battery-app">—</span>
+            <span class="dash-actions"><a href="https://psych-battery-app.vercel.app" target="_blank" rel="noopener" title="Live">↗</a></span>
+          </li>
+          <li class="db-proj-row">
+            <span class="dash-num">02</span>
+            <span><span class="status-pill status-pill--stable">Stable</span></span>
+            <span class="dash-slug">ai-in-design-map</span>
+            <span class="dash-type">Map</span>
+            <span class="db-proj-goal">Live research map supporting the IDETC 2026 paper</span>
+            <span class="dash-updated proj-last-commit" data-repo="ai-in-design-map">—</span>
+            <span class="dash-actions"><a href="https://ai-in-design-map.vercel.app" target="_blank" rel="noopener" title="Live">↗</a></span>
+          </li>
+          <li class="db-proj-row">
+            <span class="dash-num">03</span>
+            <span><span class="status-pill status-pill--stable">Stable</span></span>
+            <span class="dash-slug">dfm-graph-explorer</span>
+            <span class="dash-type">Instrument</span>
+            <span class="db-proj-goal">Interactive knowledge graph over DFM discourse corpus</span>
+            <span class="dash-updated proj-last-commit" data-repo="dfm-graph-explorer">—</span>
+            <span class="dash-actions"><a href="https://dfm-graph-explorer.vercel.app" target="_blank" rel="noopener" title="Live">↗</a></span>
+          </li>
+          <li class="db-proj-row">
+            <span class="dash-num">04</span>
+            <span><span class="status-pill status-pill--stable">Stable</span></span>
+            <span class="dash-slug">dpm-research-hub</span>
+            <span class="dash-type">Infrastructure</span>
+            <span class="db-proj-goal">Research documentation hub and Psych Battery sandbox</span>
+            <span class="dash-updated proj-last-commit" data-repo="dpm-research-hub">—</span>
+            <span class="dash-actions"><a href="https://dpm-research-hub.vercel.app" target="_blank" rel="noopener" title="Live">↗</a></span>
+          </li>
+          <li class="db-proj-row">
+            <span class="dash-num">05</span>
+            <span><span class="status-pill status-pill--active">Active</span></span>
+            <span class="dash-slug">idetc-paper-site</span>
+            <span class="dash-type">Paper</span>
+            <span class="db-proj-goal">Public companion site for ASME IDETC 2026 submission</span>
+            <span class="dash-updated proj-last-commit" data-repo="idetc-paper-site">—</span>
+            <span class="dash-actions"><a href="https://idetc-paper-site.vercel.app" target="_blank" rel="noopener" title="Live">↗</a></span>
+          </li>
+          <li class="db-proj-row">
+            <span class="dash-num">06</span>
+            <span><span class="status-pill status-pill--shipped">Shipped</span></span>
+            <span class="dash-slug">site-runtime-baseline</span>
+            <span class="dash-type">Infrastructure</span>
+            <span class="db-proj-goal">Reusable scaffold for all future sites — clone, don't hand-build</span>
+            <span class="dash-updated">Apr 25</span>
+            <span class="dash-actions"><span class="dash-action-empty" title="Not deployed">—</span></span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ═══ WORKFLOW PANEL ═══ -->
+      <div class="db-section">
+        <div class="db-section-head">
+          <span class="db-section-title">Workflow</span>
+          <span class="db-section-count">7 skills · 5 playbooks · 7 hooks + 1 scheduled</span>
+        </div>
+        <div class="db-tools-grid">
+
+          <!-- Skills column -->
+          <div class="db-col">
+            <div class="db-col-head">Claude Code Skills</div>
+            <ul class="db-tool-list">
+              <li class="db-tool-row">
+                <span class="db-tool-invoke">/deep-search</span>
+                <span class="db-tool-desc">Multi-step web research, fan-out, human sources</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="db-tool-invoke">/environment-preflight</span>
+                <span class="db-tool-desc">Validate deps, ports, env vars, git state before builds</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="db-tool-invoke">/fellowship-review</span>
+                <span class="db-tool-desc">Classify fellowship type, pull rubric, review draft</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="db-tool-invoke">/hue</span>
+                <span class="db-tool-desc">Design language + theme generator, prevents vibe-coded defaults</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="db-tool-invoke">/parallelize</span>
+                <span class="db-tool-desc">Decompose task into concurrent sub-agents</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="db-tool-invoke">/process-linkedin-inbox</span>
+                <span class="db-tool-desc">Triage inbox, draft replies, extract research leads</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="db-tool-invoke">/research-asset-manifest</span>
+                <span class="db-tool-desc">Inventory research folder → stable IDs + issues list</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Automations column -->
+          <div class="db-col">
+            <div class="db-col-head">Hooks &amp; Automations</div>
+            <ul class="db-tool-list">
+              <li class="db-tool-row">
+                <span class="hook-trigger hook-trigger--pre db-hook-badge">PreToolUse·Bash</span>
+                <span class="db-tool-name">check-secret-exposure.js</span>
+                <span class="db-tool-desc">Blocks commands printing API keys or credentials</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="hook-trigger hook-trigger--pre db-hook-badge">PreToolUse·Bash</span>
+                <span class="db-tool-name">block-dangerous-bash.js</span>
+                <span class="db-tool-desc">Intercepts rm -rf, sudo, curl | sh patterns</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="hook-trigger hook-trigger--pre db-hook-badge">PreToolUse·Write</span>
+                <span class="db-tool-name">protect-firmware.js</span>
+                <span class="db-tool-desc">Guards firmware + system-critical paths from edits</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="hook-trigger hook-trigger--post db-hook-badge">PostToolUse</span>
+                <span class="db-tool-name">format-on-edit.js</span>
+                <span class="db-tool-desc">Auto-formats code after every Write or Edit</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="hook-trigger hook-trigger--stop db-hook-badge">Stop</span>
+                <span class="db-tool-name">check-session-size.js</span>
+                <span class="db-tool-desc">Warns at 8 MB JSONL, red alert at 16 MB</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="hook-trigger hook-trigger--session db-hook-badge">SessionStart</span>
+                <span class="db-tool-name">session-primer.js</span>
+                <span class="db-tool-desc">Loads project context on startup / resume</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="hook-trigger hook-trigger--scheduled db-hook-badge">Daily 6am</span>
+                <span class="db-tool-name">dpm-sites-daily-update</span>
+                <span class="db-tool-desc">Fetches GitHub commit dates → updates project-status.json → pushes</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Playbooks column -->
+          <div class="db-col">
+            <div class="db-col-head">Playbooks</div>
+            <ul class="db-tool-list">
+              <li class="db-tool-row">
+                <span class="db-tool-name">build-playbook.md</span>
+                <span class="db-tool-desc">Content hub from scratch — Express + Vercel, two patterns</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="db-tool-name">explainer_site_playbook.md</span>
+                <span class="db-tool-desc">Explainer/educational site template + anti-vibe checklist</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="db-tool-name">dfm-graph-explorer/PLAYBOOK.md</span>
+                <span class="db-tool-desc">Single-file SPA knowledge graph — layouts, bugs, budget</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="db-tool-name">ai-engineering-design-db/PLAYBOOK.md</span>
+                <span class="db-tool-desc">Database consolidation + knowledge graph operations</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="db-tool-name">ai-schools-of-thought-explorer/PLAYBOOK.md</span>
+                <span class="db-tool-desc">Research exploration + content workflow for schools site</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
     </section>
 
     <footer class="colophon">
