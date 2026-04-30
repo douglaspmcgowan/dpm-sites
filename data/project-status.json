@@ -1,0 +1,72 @@
+{
+  "generated": "2026-04-29",
+  "note": "Tracked projects for the dpm-sites landing page. GitHub-backed lastCommit values are refreshed by scripts/update-project-status.ps1.",
+  "projects": [
+    {
+      "id": "psych-battery-app",
+      "name": "Psych Battery App",
+      "status": "active",
+      "layer": "Instrument",
+      "goal": "Keep the instrument legible, calibrated, and easy to demo as a single-page cognitive battery.",
+      "currentState": "Active UI and measurement passes continue across the local and deployed app surfaces.",
+      "url": "https://psych-battery-app.vercel.app",
+      "githubRepo": "psych-battery-app",
+      "lastCommit": null
+    },
+    {
+      "id": "ai-in-design-map",
+      "name": "AI in Engineering Design",
+      "status": "stable",
+      "layer": "Map",
+      "goal": "Maintain the field map as a clear reference layer for AI in computational engineering design.",
+      "currentState": "Stable public map with ongoing content expansion and school-page refinement.",
+      "url": "https://ai-in-design-map.vercel.app",
+      "githubRepo": "ai-in-design-map",
+      "lastCommit": null
+    },
+    {
+      "id": "dfm-graph-explorer",
+      "name": "DFM Graph Explorer",
+      "status": "stable",
+      "layer": "Instrument",
+      "goal": "Keep the discourse graph useful as the main exploratory instrument for the DFM corpus.",
+      "currentState": "Stable explorer with recent graph and canvas iteration paths already in place.",
+      "url": "https://dfm-graph-explorer.vercel.app",
+      "githubRepo": "dfm-graph-explorer",
+      "lastCommit": null
+    },
+    {
+      "id": "dpm-research-hub",
+      "name": "Research Hub",
+      "status": "stable",
+      "layer": "Infrastructure",
+      "goal": "Use the hub as the infrastructure layer for research notes, summaries, and small experimental sandboxes.",
+      "currentState": "Stable aggregation point for talks, papers, and supporting project context.",
+      "url": "https://dpm-research-hub.vercel.app",
+      "githubRepo": "dpm-research-hub",
+      "lastCommit": null
+    },
+    {
+      "id": "idetc-paper-site",
+      "name": "IDETC Paper Site",
+      "status": "active",
+      "layer": "Paper",
+      "goal": "Support the paper cycle with a polished public companion for the IDETC submission.",
+      "currentState": "Active polish and publication support while the paper and companion materials are still moving.",
+      "url": "https://idetc-paper-site.vercel.app",
+      "githubRepo": "idetc-paper-site",
+      "lastCommit": null
+    },
+    {
+      "id": "site-runtime-baseline",
+      "name": "Site Runtime Baseline",
+      "status": "shipped",
+      "layer": "Infrastructure",
+      "goal": "Preserve a reusable runtime baseline for new DPM sites, with the house shell, theme, and deploy defaults intact.",
+      "currentState": "Shipped internal baseline snapshot locked from the Apr 25 handoff.",
+      "url": null,
+      "githubRepo": null,
+      "lastCommit": "2026-04-25T00:00:00Z"
+    }
+  ]
+}

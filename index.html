@@ -33,7 +33,7 @@
         </span>
       </div>
       <h1 class="title"><em>Sites</em></h1>
-      <p class="dek">An index of sixteen web things deployed under <span class="mono">douglas-mcgowans-projects</span> — papers, essays, reference libraries, and tools.</p>
+      <p class="dek">An index of sixteen web things deployed under <span class="mono">douglas-mcgowans-projects</span> — papers, essays, reference libraries, and tools. Plus a workflow library and project tracker.</p>
       <div class="byline-row">
         <span class="byline">Douglas McGowan</span>
         <span class="sep">·</span>
@@ -46,6 +46,8 @@
     <nav class="toc" aria-label="Sections">
       <a href="#research"><span class="rom">I.</span> Research</a>
       <a href="#personal"><span class="rom">II.</span> Personal</a>
+      <a href="#playbooks"><span class="rom">III.</span> Playbooks &amp; Skills</a>
+      <a href="#projects"><span class="rom">IV.</span> Projects</a>
     </nav>
 
     <!-- ========== I. RESEARCH ========== -->
@@ -307,6 +309,345 @@
             <a class="btn-live" href="https://zahra-career-hub.vercel.app" target="_blank" rel="noopener">Live <span aria-hidden="true">↗</span></a>
             <span class="btn-empty">Source TBD</span>
             <span class="card-date" data-field="updated"></span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ========== III. PLAYBOOKS ========== -->
+    <section class="chapter" id="playbooks">
+      <h2 class="chapter-head">
+        <span class="rom-badge">III</span>
+        <span class="chapter-title">Playbooks &amp; Skills</span>
+        <span class="count">Nineteen tools</span>
+      </h2>
+      <p class="chapter-intro">Reusable operating assets behind the deployed sites: build playbooks, Claude Code skills, and automation hooks that keep research and shipping work repeatable.</p>
+
+      <div class="subsection-head">
+        <span class="subsection-label">A. Playbooks</span>
+        <span class="subsection-count">Five playbooks</span>
+      </div>
+      <ul class="grid">
+        <li class="card">
+          <div class="card-head">
+            <span class="card-num">P1</span>
+            <span class="card-stack">Playbook</span>
+          </div>
+          <h3 class="card-title">Content Hub Web App</h3>
+          <p class="card-url"><span class="mono">build-playbook.md</span></p>
+          <p class="card-desc">Deployment playbook for standing up the content hub stack quickly, from local Express scaffolding through Vercel handoff.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Deploy</span>
+            <span class="skill-tag">Express</span>
+            <span class="skill-tag">Vercel</span>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-head">
+            <span class="card-num">P2</span>
+            <span class="card-stack">Playbook</span>
+          </div>
+          <h3 class="card-title">Explainer Site</h3>
+          <p class="card-url"><span class="mono">explainer_site_playbook.md</span></p>
+          <p class="card-desc">Static-site playbook for turning a teaching argument into a structured explainer with durable navigation, pacing, and educational framing.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Static</span>
+            <span class="skill-tag">Education</span>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-head">
+            <span class="card-num">P3</span>
+            <span class="card-stack">Playbook</span>
+          </div>
+          <h3 class="card-title">DFM Graph Explorer</h3>
+          <p class="card-url"><span class="mono">dfm-graph-explorer/PLAYBOOK.md</span></p>
+          <p class="card-desc">Single-page application playbook for the discourse graph, including D3 layout decisions, canvas behaviors, and deploy-safe iteration loops.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Graph</span>
+            <span class="skill-tag">D3</span>
+            <span class="skill-tag">SPA</span>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-head">
+            <span class="card-num">P4</span>
+            <span class="card-stack">Playbook</span>
+          </div>
+          <h3 class="card-title">AI Engineering Design DB</h3>
+          <p class="card-url"><span class="mono">ai-engineering-design-db/PLAYBOOK.md</span></p>
+          <p class="card-desc">Database build notes for the engineering-design knowledge base, with schema, ingestion, and relationship-shaping patterns for research use.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Database</span>
+            <span class="skill-tag">Knowledge Graph</span>
+          </div>
+        </li>
+        <li class="card">
+          <div class="card-head">
+            <span class="card-num">P5</span>
+            <span class="card-stack">Playbook</span>
+          </div>
+          <h3 class="card-title">AI Schools of Thought</h3>
+          <p class="card-url"><span class="mono">ai-schools-of-thought-explorer/PLAYBOOK.md</span></p>
+          <p class="card-desc">Research-content playbook for building the AI argument map, from sourced notes into structured school pages and explorable views.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Content</span>
+            <span class="skill-tag">Research</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="subsection-head">
+        <span class="subsection-label">B. Claude Code Skills</span>
+        <span class="subsection-count">Seven skills</span>
+      </div>
+      <ul class="grid">
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S1</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Deep Search</h3>
+          <p class="card-url"><span class="mono">/deep-search</span></p>
+          <p class="card-desc">Runs web-grounded, parallel research sweeps and returns source-bounded synthesis instead of guesswork.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Research</span>
+            <span class="skill-tag">Web</span>
+            <span class="skill-tag">Parallel</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S2</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Environment Preflight</h3>
+          <p class="card-url"><span class="mono">/environment-preflight</span></p>
+          <p class="card-desc">Checks runtime assumptions before deploy or demo work so small environment mismatches fail early.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Deploy</span>
+            <span class="skill-tag">Validation</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S3</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Fellowship Review</h3>
+          <p class="card-url"><span class="mono">/fellowship-review</span></p>
+          <p class="card-desc">Applies a structured editorial review pass to fellowship materials with attention to argument quality and fit.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Writing</span>
+            <span class="skill-tag">Review</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S4</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Hue</h3>
+          <p class="card-url"><span class="mono">/hue</span></p>
+          <p class="card-desc">Branding and CSS helper for pushing a site toward a deliberate palette, material language, and typographic voice.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Design</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">Branding</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S5</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Parallelize</h3>
+          <p class="card-url"><span class="mono">/parallelize</span></p>
+          <p class="card-desc">Breaks bounded work into safe parallel tracks so independent analysis or execution can run without stepping on shared files.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Agents</span>
+            <span class="skill-tag">Parallel</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S6</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Process LinkedIn Inbox</h3>
+          <p class="card-url"><span class="mono">/process-linkedin-inbox</span></p>
+          <p class="card-desc">Workflow helper for triaging inbound LinkedIn conversations into action buckets, summaries, and follow-up tasks.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Workflow</span>
+            <span class="skill-tag">LinkedIn</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S7</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Research Asset Manifest</h3>
+          <p class="card-url"><span class="mono">/research-asset-manifest</span></p>
+          <p class="card-desc">Inventories notes, papers, folders, and site assets so a project can be resumed with a concrete manifest instead of memory.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Research</span>
+            <span class="skill-tag">Inventory</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="subsection-head">
+        <span class="subsection-label">C. Hooks &amp; Automations</span>
+        <span class="subsection-count">Seven hooks &middot; One scheduled task</span>
+      </div>
+      <ul class="hook-list">
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--pre">PreToolUse &middot; Bash</span>
+          <span class="hook-name">check-secret-exposure.js</span>
+          <span class="hook-desc">Screens outgoing shell commands for accidental credential exposure before they run.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--pre">PreToolUse &middot; Bash</span>
+          <span class="hook-name">block-dangerous-bash.js</span>
+          <span class="hook-desc">Rejects destructive shell patterns that are too risky for normal coding sessions.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--pre">PreToolUse &middot; Write/Edit</span>
+          <span class="hook-name">protect-firmware.js</span>
+          <span class="hook-desc">Protects firmware surfaces from casual edits when the session scope is not explicitly hardware-facing.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--pre">PreToolUse &middot; Obsidian</span>
+          <span class="hook-name">block-obsidian-delete.js</span>
+          <span class="hook-desc">Stops destructive note deletion inside Obsidian-linked workspaces.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--post">PostToolUse &middot; Write/Edit</span>
+          <span class="hook-name">format-on-edit.js</span>
+          <span class="hook-desc">Runs targeted formatting after file writes so touched files stay clean without a full-repo pass.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--stop">Stop</span>
+          <span class="hook-name">check-session-size.js</span>
+          <span class="hook-desc">Warns when a session is getting too large to remain efficient and easy to reason about.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--session">SessionStart</span>
+          <span class="hook-name">session-primer.js</span>
+          <span class="hook-desc">Injects startup context so each session begins with the current workspace rules and constraints in view.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--scheduled">Scheduled &middot; Daily</span>
+          <span class="hook-name">zahra-job-scan</span>
+          <span class="hook-desc">Daily automation for job-scan upkeep and inbox-ready updates on the Zahra workflow.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ========== IV. PROJECTS ========== -->
+    <section class="chapter" id="projects">
+      <h2 class="chapter-head">
+        <span class="rom-badge">IV</span>
+        <span class="chapter-title">Projects</span>
+        <span class="count" id="proj-count">Six tracked</span>
+      </h2>
+      <p class="chapter-intro">A narrower tracker for the projects under active maintenance, with live status, current goal, and the most recent GitHub push where a repo is public.</p>
+      <div class="proj-meta">
+        <span class="proj-meta-item">2 active</span>
+        <span class="proj-meta-item">3 stable</span>
+        <span class="proj-meta-item">1 shipped</span>
+        <span class="proj-meta-item">GitHub dates cached 1h</span>
+      </div>
+      <ul class="grid" id="proj-grid">
+        <li class="card proj-card">
+          <div class="card-head">
+            <span class="card-num">01</span>
+            <span class="status-pill status-pill--active">Active</span>
+          </div>
+          <h3 class="card-title">Psych Battery App</h3>
+          <p class="card-url"><span class="mono">psych-battery-app.vercel.app</span></p>
+          <p class="card-desc proj-goal">Goal: Keep the instrument legible, calibrated, and easy to demo as a single-page cognitive battery.</p>
+          <p class="card-desc proj-state">State: Active UI and measurement passes continue across the local and deployed app surfaces.</p>
+          <div class="card-foot">
+            <a class="btn-live" href="https://psych-battery-app.vercel.app" target="_blank" rel="noopener">Live <span aria-hidden="true">&#8599;</span></a>
+            <span class="layer-tag">Instrument</span>
+            <span class="card-date proj-last-commit" data-repo="psych-battery-app">--</span>
+          </div>
+        </li>
+        <li class="card proj-card">
+          <div class="card-head">
+            <span class="card-num">02</span>
+            <span class="status-pill status-pill--stable">Stable</span>
+          </div>
+          <h3 class="card-title">AI in Engineering Design</h3>
+          <p class="card-url"><span class="mono">ai-in-design-map.vercel.app</span></p>
+          <p class="card-desc proj-goal">Goal: Maintain the field map as a clear reference layer for AI in computational engineering design.</p>
+          <p class="card-desc proj-state">State: Stable public map with ongoing content expansion and school-page refinement.</p>
+          <div class="card-foot">
+            <a class="btn-live" href="https://ai-in-design-map.vercel.app" target="_blank" rel="noopener">Live <span aria-hidden="true">&#8599;</span></a>
+            <span class="layer-tag">Map</span>
+            <span class="card-date proj-last-commit" data-repo="ai-in-design-map">--</span>
+          </div>
+        </li>
+        <li class="card proj-card">
+          <div class="card-head">
+            <span class="card-num">03</span>
+            <span class="status-pill status-pill--stable">Stable</span>
+          </div>
+          <h3 class="card-title">DFM Graph Explorer</h3>
+          <p class="card-url"><span class="mono">dfm-graph-explorer.vercel.app</span></p>
+          <p class="card-desc proj-goal">Goal: Keep the discourse graph useful as the main exploratory instrument for the DFM corpus.</p>
+          <p class="card-desc proj-state">State: Stable explorer with recent graph and canvas iteration paths already in place.</p>
+          <div class="card-foot">
+            <a class="btn-live" href="https://dfm-graph-explorer.vercel.app" target="_blank" rel="noopener">Live <span aria-hidden="true">&#8599;</span></a>
+            <span class="layer-tag">Instrument</span>
+            <span class="card-date proj-last-commit" data-repo="dfm-graph-explorer">--</span>
+          </div>
+        </li>
+        <li class="card proj-card">
+          <div class="card-head">
+            <span class="card-num">04</span>
+            <span class="status-pill status-pill--stable">Stable</span>
+          </div>
+          <h3 class="card-title">Research Hub</h3>
+          <p class="card-url"><span class="mono">dpm-research-hub.vercel.app</span></p>
+          <p class="card-desc proj-goal">Goal: Use the hub as the infrastructure layer for research notes, summaries, and small experimental sandboxes.</p>
+          <p class="card-desc proj-state">State: Stable aggregation point for talks, papers, and supporting project context.</p>
+          <div class="card-foot">
+            <a class="btn-live" href="https://dpm-research-hub.vercel.app" target="_blank" rel="noopener">Live <span aria-hidden="true">&#8599;</span></a>
+            <span class="layer-tag">Infrastructure</span>
+            <span class="card-date proj-last-commit" data-repo="dpm-research-hub">--</span>
+          </div>
+        </li>
+        <li class="card proj-card">
+          <div class="card-head">
+            <span class="card-num">05</span>
+            <span class="status-pill status-pill--active">Active</span>
+          </div>
+          <h3 class="card-title">IDETC Paper Site</h3>
+          <p class="card-url"><span class="mono">idetc-paper-site.vercel.app</span></p>
+          <p class="card-desc proj-goal">Goal: Support the paper cycle with a polished public companion for the IDETC submission.</p>
+          <p class="card-desc proj-state">State: Active polish and publication support while the paper and companion materials are still moving.</p>
+          <div class="card-foot">
+            <a class="btn-live" href="https://idetc-paper-site.vercel.app" target="_blank" rel="noopener">Live <span aria-hidden="true">&#8599;</span></a>
+            <span class="layer-tag">Paper</span>
+            <span class="card-date proj-last-commit" data-repo="idetc-paper-site">--</span>
+          </div>
+        </li>
+        <li class="card proj-card">
+          <div class="card-head">
+            <span class="card-num">06</span>
+            <span class="status-pill status-pill--shipped">Shipped</span>
+          </div>
+          <h3 class="card-title">Site Runtime Baseline</h3>
+          <p class="card-url"><span class="mono">No public URL</span></p>
+          <p class="card-desc proj-goal">Goal: Preserve a reusable runtime baseline for new DPM sites, with the house shell, theme, and deploy defaults intact.</p>
+          <p class="card-desc proj-state">State: Shipped internal baseline snapshot locked from the Apr 25 handoff.</p>
+          <div class="card-foot">
+            <span class="btn-empty">Internal baseline</span>
+            <span class="layer-tag">Infrastructure</span>
+            <span class="card-date proj-last-commit">Apr 25</span>
           </div>
         </li>
       </ul>
@@ -626,8 +967,20 @@
         })(cards[i]);
       }
     }
+    async function hydrateProjectCommits(){
+      var commits=document.querySelectorAll('.proj-last-commit[data-repo]');
+      for(var i=0;i<commits.length;i++){
+        (function(el){
+          var repo=el.getAttribute('data-repo');
+          getInfo(repo).then(function(info){
+            el.textContent=info&&info.pushed?fmtShort(info.pushed):'—';
+          });
+        })(commits[i]);
+      }
+    }
     if(document.documentElement.getAttribute('data-view')==='dashboard') hydrate();
     hydrateCards();
+    hydrateProjectCommits();
   })();
   </script>
 </body>
