@@ -1,0 +1,245 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "updated": "2026-05-15",
+  "person": {
+    "name": "Douglas McGowan",
+    "pronouns": "he/him",
+    "email": "dpm5970@berkeley.edu",
+    "linkedin": "https://www.linkedin.com/in/douglas-mcgowan/",
+    "github": "https://github.com/douglaspmcgowan",
+    "site": "https://dpm-sites.vercel.app",
+    "tagline": "I engineer tenacity.",
+    "current_role": "PhD student, Mechanical Engineering, UC Berkeley",
+    "advisor": "Prof. Kosa Goucher-Lambert",
+    "lab": "Co-Design Lab",
+    "lab_affiliations": [
+      "Berkeley Institute of Design (BiD)",
+      "Autodesk Industry Futures (industry collaborator)",
+      "Jacobs Design Institute Makerspace (testing partner)"
+    ]
+  },
+  "education": [
+    {
+      "institution": "University of California, Berkeley",
+      "degree": "Ph.D. Mechanical Engineering",
+      "start": "2025-08",
+      "expected_end": "2030",
+      "honors": ["UC Berkeley Chancellor's Fellow 2025-2026"]
+    },
+    {
+      "institution": "Pennsylvania State University",
+      "school": "Schreyer Honors College",
+      "degree": "B.S. Mechanical Engineering",
+      "start": "2021-08",
+      "end": "2025-05",
+      "gpa": 4.0,
+      "thesis": "Dynamic Analysis of Composite-Steel Bolted Joints for Structural System Design"
+    }
+  ],
+  "study_abroad": [
+    { "where": "National University of Singapore", "when": "2022-summer", "program": "Product Design" },
+    { "where": "Pforzheim University, Germany", "when": "2023-summer", "program": "Engineers Made in Germany (Supply Chain, ML, Laser Production)" },
+    { "where": "Western Colorado University", "when": "2021-05", "program": "Wilderness Survival & Conservation (gap)" }
+  ],
+  "research": {
+    "phd_title": "An AI-Driven Co-Creation Framework for Manufacturing-Aware Design",
+    "phd_summary": "Human-AI co-creation that integrates manufacturability into early-stage CAD/CAM, instantiated as agentic models trained on multimodal designer-machinist collaboration data.",
+    "aims": [
+      "Aim 1 — field study + framework synthesis of designer-manufacturer-AI collaboration",
+      "Aim 2 — three studies with digital design aids (machinability rubric / NL+quant / geometry assessment) to collect training data",
+      "Aim 3 — train and test agentic co-creation models (GNN, LLM, CNN, VLM) with continuous human-in-the-loop"
+    ],
+    "past": [
+      {
+        "lab": "Penn State Applied Research Lab",
+        "role": "Materials & Mechanics Modeling/Analysis Engineer",
+        "start": "2023-01",
+        "end": "2025-05",
+        "topics": ["composite-steel bolted joints", "Abaqus FEA", "MATLAB FRF/eigenfrequency", "compression + microscopy"],
+        "clearance": "Interim Secret"
+      },
+      {
+        "lab": "Penn State Materials Research Institute",
+        "role": "Research Assistant",
+        "start": "2025-02",
+        "end": "2025-04",
+        "topics": ["metal additive manufacturing microscopy", "porosity / grain-structure characterization"]
+      },
+      {
+        "lab": "Purdue Zucrow Labs (Son group)",
+        "role": "Propulsion & Testing Engineer",
+        "start": "2022-06",
+        "end": "2022-08",
+        "topics": ["DARPA ML propellant characterization", "Crawford Bomb burn testing", "Saint Robert's Law curves", "FE analysis of 7-foot test fixture"]
+      }
+    ]
+  },
+  "industry": [
+    {
+      "company": "Rivian Automotive",
+      "location": "Irvine, CA",
+      "role": "Mechanical Engineering Intern (Side Closures)",
+      "start": "2024-06",
+      "end": "2024-09",
+      "highlights": [
+        "Designed single-piece die-cast door inner panel + impact-beam assembly in CATIA",
+        "Simulated door sag in Altair Simsolid; eliminated high-strain points",
+        "FMEA + boundary diagram, BOM, decision matrix for business case",
+        "Saved millions in tooling cost vs. multi-part stamped assembly",
+        "Wrote internal DFM guide on high-pressure and high-vacuum die casting",
+        "Solution supported a patent application"
+      ]
+    }
+  ],
+  "leadership": [
+    {
+      "org": "Penn State ASME Design Team",
+      "role": "Founder & Leader",
+      "start": "2022-11",
+      "end": "2025-05",
+      "peak_size": 80,
+      "peak_projects": 4,
+      "highlights": [
+        "First multifaceted engineering design team at Penn State",
+        "First-semester launch failed; rebuilt with value-to-members strategy",
+        "Diversity Roundtable + NSBE CAD pipeline",
+        "Co-organized 2025 Penn State Equity Summit (100+ attendees)"
+      ]
+    },
+    {
+      "org": "Penn State ASME (chapter)",
+      "role": "President",
+      "start": "2024-05",
+      "end": "2025-05",
+      "peak_size": 120,
+      "highlights": [
+        "18-person exec board, 28-person leadership rebuilt",
+        "Corporate sponsorship program raised thousands of dollars",
+        "60+ events in two semesters, 100-person events"
+      ]
+    },
+    {
+      "org": "Penn State DiscipleMakers",
+      "role": "President & Treasurer",
+      "start": "2023-05",
+      "end": "2025-05",
+      "peak_size": 100,
+      "highlights": [
+        "Rebuilt leadership training for 25 leaders",
+        "Own discussion group: 20+ vs. typical 6",
+        "Two keynote speeches to 80+ students/staff",
+        "Bold Leader Award (graduation 2025)"
+      ]
+    },
+    {
+      "org": "Penn State Learning Factory",
+      "role": "Special Projects Manager",
+      "start": "2022-09",
+      "end": "2025-05",
+      "highlights": [
+        "Five-floor fab-lab asset-management system",
+        "Trained 100+ students on 3D printers, mills, lathes, CNC, laser",
+        "Spearheaded a class project now done by 250+ students/year"
+      ]
+    },
+    {
+      "org": "Autodesk (Fusion 360 Campus Champion)",
+      "role": "CAD/DFM educator",
+      "start": "2022-02",
+      "end": "2025-05",
+      "highlights": [
+        "500% Fusion usage growth on campus",
+        "Outperformed all previous Penn State ambassadors",
+        "Penn State School of Engineering Design adopted Fusion for 700-student/year intro course"
+      ]
+    },
+    {
+      "org": "Penn State Formula SAE",
+      "role": "Steering Team Leader",
+      "start": "2022-10",
+      "end": "2023-05",
+      "highlights": [
+        "50% BOM reduction on steering with same functionality",
+        "0.003\" tolerance on machined circular components",
+        "SolidWorks FEA verification"
+      ]
+    },
+    {
+      "org": "Penn State Club Boxing",
+      "role": "Varsity member (D1 club)",
+      "start": "2024-05",
+      "end": "2025-05",
+      "record": "3-0",
+      "awards": ["Coaches' Choice 2025"],
+      "highlights": [
+        "Cut from first tryout; walked on to conditioning test anyway",
+        "Made team year 2; 3-0 retired",
+        "3rd-fastest runner on team",
+        "Helped 2 national runners-up prepare for championship fights"
+      ]
+    },
+    {
+      "org": "Student Band",
+      "role": "Lead Drummer",
+      "start": "2022-04",
+      "end": "2025-05"
+    },
+    {
+      "org": "UC Berkeley Graduate Assembly",
+      "role": "Delegate",
+      "start": "2025-08"
+    }
+  ],
+  "awards": [
+    "UC Berkeley Chancellor's Fellowship (2025-2026)",
+    "Penn State Millennium Scholarship",
+    "NASA College Scholarship",
+    "ASME Frank & Dorothy Miller Scholarship",
+    "Ira M. Lubert Scholarship",
+    "Evan Walker GPA Award",
+    "Penn State Boxing Coaches' Choice (2025)",
+    "DiscipleMakers Bold Leader Award (2025)",
+    "Penn State I Engineer Tenacity feature (2025)"
+  ],
+  "skills": {
+    "cad": ["CATIA", "Fusion 360", "SolidWorks", "nTop"],
+    "cae_fea": ["Abaqus", "Altair Simsolid", "SolidWorks Simulation", "MATLAB", "FE method theory"],
+    "manufacturing": ["FDM 3D printing", "metal AM", "CNC machining", "manual mill", "manual lathe", "laser cutting", "soldering", "welding setup", "composite layup"],
+    "dfm": ["high-pressure die casting", "high-vacuum die casting", "sheet metal", "additive (FDM, SLA, metal)", "subtractive (CNC machining)", "DFM rubrics / machinability assessment"],
+    "programming": ["MATLAB", "Python", "JavaScript / TypeScript / React", "D3.js", "Eleventy", "Git", "FastAPI", "Flask", "Modal", "Qdrant", "NetworkX"],
+    "ml_ai": ["GNNs (planned)", "agentic LLMs (planned, used in dfm-kg-agent)", "2D/3D CNNs (planned)", "vision-language models (planned)", "RAG (in dfm-kg-agent)", "generative design (DfAM course)"],
+    "research_methods": ["literature review", "mixed-methods empirical study design", "experimental data acquisition", "microscopy + image analysis", "technical writing"],
+    "leadership": ["founding from zero", "multi-year cultural change", "servant leadership", "corporate sponsorship", "event planning", "training + mentorship", "conflict navigation", "cross-cultural teamwork"]
+  },
+  "signature_numbers": {
+    "gpa_undergrad": 4.0,
+    "design_team_peak_members": 80,
+    "design_team_peak_projects": 4,
+    "asme_chapter_peak_members": 120,
+    "asme_exec_board": 18,
+    "asme_events_two_semesters": 60,
+    "dm_total_members": 100,
+    "dm_leaders": 25,
+    "dm_own_group_size": 20,
+    "learning_factory_students_trained": 100,
+    "learning_factory_class_size_per_year": 250,
+    "autodesk_usage_growth_percent": 500,
+    "intro_design_course_size": 700,
+    "propellants_burn_tested": 100,
+    "saint_roberts_curves": 25,
+    "machining_tolerance_in": 0.003,
+    "fsae_bom_reduction_percent": 50,
+    "boxing_record_w_l": [3, 0],
+    "rivian_tooling_savings_usd_order": "millions"
+  },
+  "active_fellowship_applications_2026": [
+    "NSF GRFP",
+    "NDSEG",
+    "Hertz Foundation",
+    "H2H8 Foundation",
+    "DoD SMART",
+    "Ford Foundation",
+    "GEM",
+    "Aerospace Corporation pathway"
+  ]
+}
