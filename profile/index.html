@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23F0E8D6'/%3E%3Ccircle cx='16' cy='16' r='10' stroke='%233D2B1F' stroke-width='2' fill='none'/%3E%3Cline x1='16' y1='6' x2='16' y2='26' stroke='%233D2B1F' stroke-width='1' opacity='0.4'/%3E%3Cline x1='6' y1='16' x2='26' y2='16' stroke='%233D2B1F' stroke-width='1' opacity='0.4'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%233D2B1F'/%3E%3C/svg%3E">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile — Douglas McGowan</title>
+  <meta name="description" content="Consolidated reference set for Douglas McGowan: bios, experience, research, skills, signature stories, fellowship talking points." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script>(function(){try{const s=localStorage.getItem('theme');const d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));}catch(e){}})();</script>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    /* Profile-specific layout */
+    .profile-shell {
+      display: grid;
+      grid-template-columns: 18rem 1fr;
+      gap: 3rem;
+      max-width: var(--page-max);
+      margin: 0 auto;
+      padding: 4.5rem 2.25rem 5.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    @media (max-width: 900px) {
+      .profile-shell { grid-template-columns: 1fr; gap: 1.5rem; padding: 3rem 1.5rem 4rem; }
+    }
+    .profile-aside {
+      position: sticky;
+      top: 2rem;
+      align-self: start;
+      max-height: calc(100vh - 4rem);
+      overflow-y: auto;
+      padding-right: 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+    }
+    @media (max-width: 900px) {
+      .profile-aside {
+        position: static;
+        max-height: none;
+        padding-right: 0;
+        border-bottom: 1px solid var(--hair);
+        padding-bottom: 1.25rem;
+        margin-bottom: 1rem;
+      }
+    }
+    .profile-aside-head {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--hair);
+    }
+    .profile-toc {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .profile-toc li { margin: 0.05rem 0; }
+    .profile-toc a {
+      display: block;
+      padding: 0.4rem 0.6rem;
+      color: var(--ink-2);
+      text-decoration: none;
+      border-radius: 3px;
+      border-left: 2px solid transparent;
+      line-height: 1.35;
+      transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+    }
+    .profile-toc a:hover { background: var(--hair-soft); color: var(--ink); }
+    .profile-toc a.active {
+      background: var(--paper-card);
+      color: var(--ink);
+      border-left-color: var(--accent);
+      font-weight: 500;
+    }
+    .profile-toc-section {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-top: 1.25rem;
+      margin-bottom: 0.4rem;
+      padding-left: 0.6rem;
+    }
+    .profile-toc-section:first-child { margin-top: 0; }
+    .profile-back {
+      display: inline-block;
+      margin-bottom: 1.25rem;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      color: var(--ink-3);
+      text-decoration: none;
+    }
+    .profile-back:hover { color: var(--accent); }
+
+    /* Main content area */
+    .profile-main {
+      min-width: 0;
+    }
+    .profile-masthead {
+      padding-bottom: 2.25rem;
+      margin-bottom: 2.25rem;
+      border-bottom: 1px solid var(--hair);
+      position: relative;
+    }
+    .profile-masthead::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 4rem;
+      height: 5px;
+      background: var(--accent);
+    }
+    .profile-folio {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .profile-folio-actions { display: flex; gap: 0.5rem; }
+    .profile-folio-actions button {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      background: transparent;
+      border: 1px solid var(--hair);
+      color: var(--ink-2);
+      padding: 0.3rem 0.65rem;
+      border-radius: 3px;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+    }
+    .profile-folio-actions button:hover { border-color: var(--accent); color: var(--accent); }
+    .profile-title {
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      margin-bottom: 0.6rem;
+    }
+    .profile-title em { font-style: italic; color: var(--accent); }
+    .profile-dek {
+      font-size: 1.05rem;
+      color: var(--ink-2);
+      max-width: 44rem;
+      line-height: 1.5;
+    }
+    .profile-byline {
+      margin-top: 1rem;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      color: var(--ink-3);
+    }
+    .profile-byline a { color: var(--ink-2); text-decoration: none; border-bottom: 1px dotted var(--hair); }
+    .profile-byline a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* Rendered markdown content */
+    .doc-area {
+      font-family: var(--serif);
+      font-size: 1.025rem;
+      line-height: 1.7;
+      color: var(--ink);
+      max-width: 44rem;
+    }
+    .doc-area h1 {
+      font-size: 2.1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.25rem;
+      line-height: 1.15;
+    }
+    .doc-area h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 0.9rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid var(--hair-soft);
+      line-height: 1.25;
+    }
+    .doc-area h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 1.75rem;
+      margin-bottom: 0.6rem;
+    }
+    .doc-area h4 {
+      font-size: 1.02rem;
+      font-weight: 600;
+      margin-top: 1.25rem;
+      margin-bottom: 0.4rem;
+      color: var(--ink-2);
+    }
+    .doc-area p { margin-bottom: 1rem; }
+    .doc-area ul, .doc-area ol { margin: 0.5rem 0 1rem 1.5rem; }
+    .doc-area li { margin-bottom: 0.35rem; }
+    .doc-area li > ul, .doc-area li > ol { margin: 0.35rem 0 0.35rem 1.25rem; }
+    .doc-area a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent-soft); }
+    .doc-area a:hover { background: var(--paper-card); }
+    .doc-area code {
+      font-family: var(--mono);
+      font-size: 0.88em;
+      background: var(--paper-card);
+      padding: 0.1em 0.4em;
+      border-radius: 3px;
+      color: var(--ink-2);
+    }
+    .doc-area pre {
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      background: var(--paper-card);
+      padding: 1rem 1.25rem;
+      border-radius: 4px;
+      overflow-x: auto;
+      margin: 1rem 0;
+      border: 1px solid var(--hair-soft);
+      line-height: 1.5;
+    }
+    .doc-area pre code { background: transparent; padding: 0; color: var(--ink); }
+    .doc-area blockquote {
+      border-left: 3px solid var(--accent);
+      margin: 1.25rem 0;
+      padding: 0.25rem 1.25rem;
+      color: var(--ink-2);
+      font-style: italic;
+      background: var(--paper-card);
+    }
+    .doc-area blockquote p:last-child { margin-bottom: 0; }
+    .doc-area table {
+      border-collapse: collapse;
+      margin: 1rem 0 1.5rem;
+      width: 100%;
+      font-size: 0.95rem;
+    }
+    .doc-area th, .doc-area td {
+      text-align: left;
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--hair-soft);
+      vertical-align: top;
+    }
+    .doc-area th {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      border-bottom: 1px solid var(--hair);
+    }
+    .doc-area hr {
+      border: 0;
+      border-top: 1px solid var(--hair);
+      margin: 2rem 0;
+    }
+    .doc-area strong { font-weight: 600; color: var(--ink); }
+    .doc-area em { font-style: italic; }
+
+    .doc-loading {
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      color: var(--ink-3);
+      padding: 2rem 0;
+    }
+    .doc-error {
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      color: var(--accent);
+      padding: 2rem 0;
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+    }
+
+    .profile-footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--hair);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--ink-3);
+      letter-spacing: 0.04em;
+    }
+    .profile-footer a { color: var(--ink-2); text-decoration: none; border-bottom: 1px dotted var(--hair); }
+    .profile-footer a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="profile-shell">
+    <aside class="profile-aside" aria-label="Profile sections">
+      <a href="../" class="profile-back">&larr; Sites index</a>
+      <div class="profile-aside-head">Profile · 17 docs</div>
+      <div class="profile-toc-section">Overview</div>
+      <ul class="profile-toc">
+        <li><a href="#README" data-doc="README">Overview</a></li>
+        <li><a href="#quick-reference" data-doc="quick-reference">Quick reference</a></li>
+      </ul>
+      <div class="profile-toc-section">Identity</div>
+      <ul class="profile-toc">
+        <li><a href="#bio" data-doc="bio">Bio (5 lengths)</a></li>
+        <li><a href="#headline-and-pitch" data-doc="headline-and-pitch">Headlines &amp; pitches</a></li>
+        <li><a href="#about" data-doc="about">About — long-form</a></li>
+        <li><a href="#values-and-vision" data-doc="values-and-vision">Values &amp; vision</a></li>
+      </ul>
+      <div class="profile-toc-section">Track record</div>
+      <ul class="profile-toc">
+        <li><a href="#experience" data-doc="experience">Experience</a></li>
+        <li><a href="#research" data-doc="research">Research</a></li>
+        <li><a href="#education" data-doc="education">Education</a></li>
+        <li><a href="#skills" data-doc="skills">Skills</a></li>
+        <li><a href="#awards-honors" data-doc="awards-honors">Awards &amp; honors</a></li>
+        <li><a href="#leadership-impact" data-doc="leadership-impact">Leadership &amp; impact</a></li>
+      </ul>
+      <div class="profile-toc-section">Application kit</div>
+      <ul class="profile-toc">
+        <li><a href="#stories" data-doc="stories">Signature stories</a></li>
+        <li><a href="#fellowship-talking-points" data-doc="fellowship-talking-points">Fellowship talking points</a></li>
+        <li><a href="#signature-numbers" data-doc="signature-numbers">Signature numbers</a></li>
+        <li><a href="#people" data-doc="people">People &amp; recommenders</a></li>
+        <li><a href="#content-mapping" data-doc="content-mapping">Content map</a></li>
+      </ul>
+      <div class="profile-toc-section">Meta</div>
+      <ul class="profile-toc">
+        <li><a href="playbook.html">Profile playbook</a></li>
+        <li><a href="https://github.com/douglaspmcgowan/dpm-sites/tree/main/profile" target="_blank" rel="noopener">Source on GitHub ↗</a></li>
+      </ul>
+    </aside>
+
+    <main class="profile-main">
+      <header class="profile-masthead">
+        <div class="profile-folio">
+          <span>Vol. II — Personal Reference Set</span>
+          <span class="profile-folio-actions">
+            <button id="theme-toggle" type="button">Toggle theme</button>
+          </span>
+        </div>
+        <h1 class="profile-title"><em>Profile</em></h1>
+        <p class="profile-dek">A consolidated reference for Doug. Bios at five lengths. Full chronological record. Fellowship-by-fellowship framing notes. Ten signature stories with usage cues. Synthesized from the CV, GRFP, NDSEG, Hertz, H2H8 statements, and recommendation letters.</p>
+        <div class="profile-byline">
+          <a href="mailto:dpm5970@berkeley.edu">dpm5970@berkeley.edu</a>
+          &nbsp;·&nbsp;
+          <a href="https://www.linkedin.com/in/douglas-mcgowan/" target="_blank" rel="noopener">LinkedIn</a>
+          &nbsp;·&nbsp;
+          <a href="https://github.com/douglaspmcgowan" target="_blank" rel="noopener">GitHub</a>
+          &nbsp;·&nbsp;
+          UC Berkeley · Co-Design Lab · Chancellor's Fellow
+        </div>
+      </header>
+
+      <article id="doc-area" class="doc-area">
+        <p class="doc-loading">Loading…</p>
+      </article>
+
+      <footer class="profile-footer">
+        Markdown source under <a href="https://github.com/douglaspmcgowan/dpm-sites/tree/main/profile" target="_blank" rel="noopener">/profile/</a>.
+        Rendered client-side.
+        Updated May 2026.
+      </footer>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@13.0.2/marked.min.js"></script>
+  <script>
+    (function () {
+      const docArea = document.getElementById('doc-area');
+      const tocLinks = document.querySelectorAll('.profile-toc a[data-doc]');
+      const tocByDoc = {};
+      tocLinks.forEach(a => { tocByDoc[a.dataset.doc] = a; });
+
+      function setActive(doc) {
+        tocLinks.forEach(a => a.classList.toggle('active', a.dataset.doc === doc));
+      }
+
+      function frontmatterStrip(md) {
+        if (md.startsWith('---')) {
+          const end = md.indexOf('\n---', 3);
+          if (end !== -1) return md.slice(end + 4).replace(/^\s+/, '');
+        }
+        return md;
+      }
+
+      function rewriteLinks(html) {
+        // Convert [[wiki/links|labels]] and [[links]] to plain text since they're Obsidian-style.
+        return html
+          .replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, '$2')
+          .replace(/\[\[([^\]]+)\]\]/g, '$1');
+      }
+
+      async function loadDoc(doc) {
+        if (!doc) doc = 'README';
+        setActive(doc);
+        docArea.innerHTML = '<p class="doc-loading">Loading ' + doc + '.md…</p>';
+        try {
+          const r = await fetch(doc + '.md', { cache: 'no-cache' });
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          let md = await r.text();
+          md = frontmatterStrip(md);
+          const html = marked.parse(md, { mangle: false, headerIds: true });
+          docArea.innerHTML = rewriteLinks(html);
+          // Smooth scroll to top of article
+          window.scrollTo({ top: 0, behavior: 'auto' });
+        } catch (e) {
+          docArea.innerHTML = '<div class="doc-error">Couldn’t load <code>' + doc + '.md</code>: ' + e.message + '</div>';
+        }
+      }
+
+      function routeFromHash() {
+        const h = window.location.hash.replace(/^#/, '').trim();
+        loadDoc(h || 'README');
+      }
+
+      window.addEventListener('hashchange', routeFromHash);
+
+      // Intercept TOC clicks for instant routing
+      tocLinks.forEach(a => {
+        a.addEventListener('click', (ev) => {
+          ev.preventDefault();
+          const doc = a.dataset.doc;
+          history.pushState(null, '', '#' + doc);
+          loadDoc(doc);
+        });
+      });
+
+      // Theme toggle
+      const themeBtn = document.getElementById('theme-toggle');
+      themeBtn?.addEventListener('click', () => {
+        const cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        const next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+      });
+
+      routeFromHash();
+    })();
+  </script>
+</body>
+</html>

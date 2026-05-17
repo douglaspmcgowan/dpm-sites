@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23F0E8D6'/%3E%3Ccircle cx='16' cy='16' r='10' stroke='%233D2B1F' stroke-width='2' fill='none'/%3E%3Cline x1='16' y1='6' x2='16' y2='26' stroke='%233D2B1F' stroke-width='1' opacity='0.4'/%3E%3Cline x1='6' y1='16' x2='26' y2='16' stroke='%233D2B1F' stroke-width='1' opacity='0.4'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%233D2B1F'/%3E%3C/svg%3E">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Playbook — Douglas McGowan</title>
+  <meta name="description" content="How to build a structured personal-profile system: canonical markdown, dashboard layer, and rendered web pages." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script>(function(){try{const s=localStorage.getItem('theme');const d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));}catch(e){}})();</script>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .pb-shell {
+      max-width: 52rem;
+      margin: 0 auto;
+      padding: 4.5rem 2.25rem 5.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    @media (max-width: 700px) {
+      .pb-shell { padding: 3rem 1.5rem 4rem; }
+    }
+    .pb-back {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: var(--ink-3);
+      text-decoration: none;
+    }
+    .pb-back:hover { color: var(--accent); }
+    .pb-masthead {
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--hair);
+      position: relative;
+    }
+    .pb-masthead::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 4rem;
+      height: 5px;
+      background: var(--accent);
+    }
+    .pb-folio {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      margin-bottom: 1rem;
+    }
+    .pb-title {
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      margin-bottom: 0.6rem;
+    }
+    .pb-title em { font-style: italic; color: var(--accent); }
+    .pb-dek {
+      font-size: 1.05rem;
+      color: var(--ink-2);
+      line-height: 1.5;
+    }
+    .doc-area {
+      font-family: var(--serif);
+      font-size: 1.025rem;
+      line-height: 1.7;
+      color: var(--ink);
+    }
+    .doc-area h1 { font-size: 2.1rem; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 1.25rem; line-height: 1.15; }
+    .doc-area h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2.5rem; margin-bottom: 0.9rem; padding-bottom: 0.3rem; border-bottom: 1px solid var(--hair-soft); line-height: 1.25; }
+    .doc-area h3 { font-size: 1.2rem; font-weight: 600; margin-top: 1.75rem; margin-bottom: 0.6rem; }
+    .doc-area h4 { font-size: 1.02rem; font-weight: 600; margin-top: 1.25rem; margin-bottom: 0.4rem; color: var(--ink-2); }
+    .doc-area p { margin-bottom: 1rem; }
+    .doc-area ul, .doc-area ol { margin: 0.5rem 0 1rem 1.5rem; }
+    .doc-area li { margin-bottom: 0.35rem; }
+    .doc-area a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent-soft); }
+    .doc-area a:hover { background: var(--paper-card); }
+    .doc-area code { font-family: var(--mono); font-size: 0.88em; background: var(--paper-card); padding: 0.1em 0.4em; border-radius: 3px; color: var(--ink-2); }
+    .doc-area pre { font-family: var(--mono); font-size: 0.82rem; background: var(--paper-card); padding: 1rem 1.25rem; border-radius: 4px; overflow-x: auto; margin: 1rem 0; border: 1px solid var(--hair-soft); line-height: 1.5; }
+    .doc-area pre code { background: transparent; padding: 0; color: var(--ink); }
+    .doc-area blockquote { border-left: 3px solid var(--accent); margin: 1.25rem 0; padding: 0.25rem 1.25rem; color: var(--ink-2); font-style: italic; background: var(--paper-card); }
+    .doc-area blockquote p:last-child { margin-bottom: 0; }
+    .doc-area table { border-collapse: collapse; margin: 1rem 0 1.5rem; width: 100%; font-size: 0.95rem; }
+    .doc-area th, .doc-area td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--hair-soft); vertical-align: top; }
+    .doc-area th { font-family: var(--mono); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-3); border-bottom: 1px solid var(--hair); }
+    .doc-area hr { border: 0; border-top: 1px solid var(--hair); margin: 2rem 0; }
+    .doc-area strong { font-weight: 600; color: var(--ink); }
+    .doc-area em { font-style: italic; }
+    .doc-loading { font-family: var(--mono); font-size: 0.85rem; color: var(--ink-3); padding: 2rem 0; }
+    .doc-error { font-family: var(--mono); font-size: 0.85rem; color: var(--accent); padding: 2rem 0; border-left: 3px solid var(--accent); padding-left: 1rem; }
+    .pb-footer {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--hair);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--ink-3);
+      letter-spacing: 0.04em;
+    }
+    .pb-footer a { color: var(--ink-2); text-decoration: none; border-bottom: 1px dotted var(--hair); }
+    .pb-footer a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    .pb-actions { display: inline-flex; gap: 0.75rem; margin-left: 0.5rem; }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="pb-shell">
+    <a href="../" class="pb-back">&larr; Sites index</a>
+    <header class="pb-masthead">
+      <div class="pb-folio">Playbook · P7 · Section III</div>
+      <h1 class="pb-title"><em>Profile Playbook</em></h1>
+      <p class="pb-dek">How to build a structured personal-profile system that reads cleanly across applications, interviews, talks, and your own future-self search. Three layers: canonical markdown in a public repo, a dashboard view in a personal knowledge tool, and a rendered web page.</p>
+    </header>
+
+    <article id="doc-area" class="doc-area">
+      <p class="doc-loading">Loading playbook…</p>
+    </article>
+
+    <footer class="pb-footer">
+      Source markdown: <a href="https://github.com/douglaspmcgowan/dpm-sites/blob/main/profile-playbook.md" target="_blank" rel="noopener">profile-playbook.md</a>
+      <span class="pb-actions">
+        · <a href="./">View profile</a>
+        · <a href="https://github.com/douglaspmcgowan/dpm-sites/tree/main/profile" target="_blank" rel="noopener">Source folder</a>
+      </span>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@13.0.2/marked.min.js"></script>
+  <script>
+    (async function () {
+      const docArea = document.getElementById('doc-area');
+      function stripFrontmatter(md) {
+        if (md.startsWith('---')) {
+          const end = md.indexOf('\n---', 3);
+          if (end !== -1) return md.slice(end + 4).replace(/^\s+/, '');
+        }
+        return md;
+      }
+      function stripFirstH1(html) {
+        return html.replace(/^\s*<h1[^>]*>[\s\S]*?<\/h1>\s*/i, '');
+      }
+      try {
+        const r = await fetch('../profile-playbook.md', { cache: 'no-cache' });
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        let md = stripFrontmatter(await r.text());
+        let html = marked.parse(md, { mangle: false, headerIds: true });
+        html = stripFirstH1(html);
+        docArea.innerHTML = html;
+      } catch (e) {
+        docArea.innerHTML = '<div class="doc-error">Couldn’t load <code>profile-playbook.md</code>: ' + e.message + '</div>';
+      }
+    })();
+  </script>
+</body>
+</html>
