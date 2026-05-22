@@ -21,7 +21,7 @@
       <div class="folio">
         <span class="folio-left">Vol. I — Index of Works</span>
         <span class="folio-right">
-          <span class="folio-updated">Updated Apr 2026</span>
+          <span class="folio-updated">Updated May 2026</span>
           <button id="view-toggle" class="view-toggle" type="button" aria-label="Toggle editorial and dashboard view">
             <span class="view-toggle-label" data-view-label="editorial">Dashboard</span>
             <span class="view-toggle-label" data-view-label="dashboard">Editorial</span>
@@ -444,7 +444,7 @@
 
       <div class="subsection-head">
         <span class="subsection-label">B. Claude Code Skills</span>
-        <span class="subsection-count">Seven skills</span>
+        <span class="subsection-count">Eight skills</span>
       </div>
       <ul class="grid">
         <li class="card skill-invoke">
@@ -540,11 +540,25 @@
             <span class="skill-tag">Inventory</span>
           </div>
         </li>
+        <li class="card skill-invoke card-featured">
+          <div class="card-head">
+            <span class="card-num">S8</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Update Sites Hub</h3>
+          <p class="card-url"><span class="mono">/update-sites-hub</span></p>
+          <p class="card-desc">Refreshes this hub — pulls latest GitHub push dates, updates project-status.json, reconciles site/skill/hook/playbook counts, updates the header date, and commits + pushes. Run manually or on a 4-day scheduled web task.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Maintenance</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Scheduled</span>
+          </div>
+        </li>
       </ul>
 
       <div class="subsection-head">
         <span class="subsection-label">C. Hooks &amp; Automations</span>
-        <span class="subsection-count">Seven hooks &middot; One scheduled task</span>
+        <span class="subsection-count">Eight hooks &middot; One scheduled task</span>
       </div>
       <ul class="hook-list">
         <li class="hook-row">
@@ -578,9 +592,14 @@
           <span class="hook-desc">Warns when a session is getting too large to remain efficient and easy to reason about.</span>
         </li>
         <li class="hook-row">
+          <span class="hook-trigger hook-trigger--stop">Stop</span>
+          <span class="hook-name">stop-hook-git-check.sh</span>
+          <span class="hook-desc">Checks for uncommitted or unpushed changes at session end; warns before exiting a dirty working tree. Active in global settings.</span>
+        </li>
+        <li class="hook-row">
           <span class="hook-trigger hook-trigger--session">SessionStart</span>
-          <span class="hook-name">session-primer.js</span>
-          <span class="hook-desc">Injects startup context so each session begins with the current workspace rules and constraints in view.</span>
+          <span class="hook-name">session-start.sh</span>
+          <span class="hook-desc">Loads project context on startup — repo summary, recent commits, and a reminder to run /update-sites-hub. Active in .claude/settings.json.</span>
         </li>
         <li class="hook-row">
           <span class="hook-trigger hook-trigger--scheduled">Scheduled &middot; Daily</span>
@@ -705,9 +724,9 @@
         <span class="dash-sep">·</span>
         <span class="dash-meta-item">6 projects</span>
         <span class="dash-sep">·</span>
-        <span class="dash-meta-item">7 skills</span>
+        <span class="dash-meta-item">8 skills</span>
         <span class="dash-sep">·</span>
-        <span class="dash-meta-item">7 hooks</span>
+        <span class="dash-meta-item">8 hooks</span>
         <span class="dash-sep">·</span>
         <span class="dash-meta-item">GitHub API</span>
         <span class="dash-sep">·</span>
@@ -994,7 +1013,7 @@
       <div class="db-section">
         <div class="db-section-head">
           <span class="db-section-title">Workflow</span>
-          <span class="db-section-count">7 skills · 6 playbooks · 7 hooks + 1 scheduled</span>
+          <span class="db-section-count">8 skills · 7 playbooks · 8 hooks + 1 scheduled</span>
         </div>
         <div class="db-tools-grid">
 
@@ -1030,6 +1049,10 @@
                 <span class="db-tool-invoke">/research-asset-manifest</span>
                 <span class="db-tool-desc">Inventory research folder → stable IDs + issues list</span>
               </li>
+              <li class="db-tool-row">
+                <span class="db-tool-invoke">/update-sites-hub</span>
+                <span class="db-tool-desc">Refresh project status, dates, counts → commit + push</span>
+              </li>
             </ul>
           </div>
 
@@ -1063,14 +1086,19 @@
                 <span class="db-tool-desc">Warns at 8 MB JSONL, red alert at 16 MB</span>
               </li>
               <li class="db-tool-row">
-                <span class="hook-trigger hook-trigger--session db-hook-badge">SessionStart</span>
-                <span class="db-tool-name">session-primer.js</span>
-                <span class="db-tool-desc">Loads project context on startup / resume</span>
+                <span class="hook-trigger hook-trigger--stop db-hook-badge">Stop</span>
+                <span class="db-tool-name">stop-hook-git-check.sh</span>
+                <span class="db-tool-desc">Checks uncommitted / unpushed changes at session end</span>
               </li>
               <li class="db-tool-row">
-                <span class="hook-trigger hook-trigger--scheduled db-hook-badge">Daily 6am</span>
-                <span class="db-tool-name">dpm-sites-daily-update</span>
-                <span class="db-tool-desc">Fetches GitHub commit dates → updates project-status.json → pushes</span>
+                <span class="hook-trigger hook-trigger--session db-hook-badge">SessionStart</span>
+                <span class="db-tool-name">session-start.sh</span>
+                <span class="db-tool-desc">Repo context, recent commits, update reminder on startup</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="hook-trigger hook-trigger--scheduled db-hook-badge">Every 4d</span>
+                <span class="db-tool-name">/update-sites-hub</span>
+                <span class="db-tool-desc">Refresh project status, dates, counts → commit + push</span>
               </li>
             </ul>
           </div>
@@ -1102,6 +1130,10 @@
               <li class="db-tool-row">
                 <span class="db-tool-name">dashboard-tracker-playbook.md</span>
                 <span class="db-tool-desc">Conferences / fellowships / jobs tracker — 4 views, iCal, refresh routine</span>
+              </li>
+              <li class="db-tool-row">
+                <span class="db-tool-name">profile-playbook.md</span>
+                <span class="db-tool-desc">Single-source-of-truth profile — 17-doc canon, Obsidian Bases, web render</span>
               </li>
             </ul>
           </div>
