@@ -21,7 +21,7 @@
       <div class="folio">
         <span class="folio-left">Vol. I — Index of Works</span>
         <span class="folio-right">
-          <span class="folio-updated">Updated Apr 2026</span>
+          <span class="folio-updated">Updated May 2026</span>
           <button id="view-toggle" class="view-toggle" type="button" aria-label="Toggle editorial and dashboard view">
             <span class="view-toggle-label" data-view-label="editorial">Dashboard</span>
             <span class="view-toggle-label" data-view-label="dashboard">Editorial</span>
@@ -48,6 +48,7 @@
       <a href="#personal"><span class="rom">II.</span> Personal</a>
       <a href="#playbooks"><span class="rom">III.</span> Playbooks &amp; Skills</a>
       <a href="#projects"><span class="rom">IV.</span> Projects</a>
+      <a href="#workflow"><span class="rom">V.</span> Workflow Library</a>
     </nav>
 
     <!-- ========== I. RESEARCH ========== -->
@@ -305,7 +306,7 @@
       <h2 class="chapter-head">
         <span class="rom-badge">III</span>
         <span class="chapter-title">Playbooks &amp; Skills</span>
-        <span class="count">Twenty tools</span>
+        <span class="count">Forty-seven tools</span>
       </h2>
       <p class="chapter-intro">Reusable operating assets behind the deployed sites: build playbooks, Claude Code skills, and automation hooks that keep research and shipping work repeatable.</p>
 
@@ -415,7 +416,7 @@
 
       <div class="subsection-head">
         <span class="subsection-label">B. Claude Code Skills</span>
-        <span class="subsection-count">Seven skills</span>
+        <span class="subsection-count">Twenty skills</span>
       </div>
       <ul class="grid">
         <li class="card skill-invoke">
@@ -511,11 +512,186 @@
             <span class="skill-tag">Inventory</span>
           </div>
         </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S8</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Claude Sync</h3>
+          <p class="card-url"><span class="mono">/claude-sync</span></p>
+          <p class="card-desc">Reconciles <span class="mono">~/.claude</span> against <span class="mono">claude-global-config</span>, updates repo-map.md, and refreshes this hub — all four parts, with a health-check report at the end.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Config</span>
+            <span class="skill-tag">Sync</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S9</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Doctor</h3>
+          <p class="card-url"><span class="mono">/doctor</span></p>
+          <p class="card-desc">46-check project health audit across security, test coverage, hooks, skills, agents, and CI. Adaptive scoring by project maturity. Can diagnose only or apply fixes.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Audit</span>
+            <span class="skill-tag">Security</span>
+            <span class="skill-tag">Health</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S10</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Build Graph Explorer</h3>
+          <p class="card-url"><span class="mono">/build-graph-explorer</span></p>
+          <p class="card-desc">Scaffolds a full knowledge-graph SPA — D3 force layout, starfield background, cluster zoom, sidebar detail panel. ~5.6k-line reference implementation.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Graph</span>
+            <span class="skill-tag">D3</span>
+            <span class="skill-tag">SPA</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S11</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Build Tracker</h3>
+          <p class="card-url"><span class="mono">/build-tracker</span></p>
+          <p class="card-desc">Generates a deadline/application tracker with calendar, Gantt, cards, and map views. iCal export, localStorage status and notes, biweekly refresh routine.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Tracker</span>
+            <span class="skill-tag">Express</span>
+            <span class="skill-tag">Vercel</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S12</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Daily Review</h3>
+          <p class="card-url"><span class="mono">/daily-review</span></p>
+          <p class="card-desc">Structured daily/weekly reflection pass over tasks, goals, and project state — surfaces what's blocked, what shipped, and what to prioritize next.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Reflection</span>
+            <span class="skill-tag">Planning</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S13</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Make Playbook</h3>
+          <p class="card-url"><span class="mono">/make-playbook</span></p>
+          <p class="card-desc">After a successful build, extracts the key decisions and patterns into a reusable playbook file so the next similar project doesn't start from scratch.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Documentation</span>
+            <span class="skill-tag">Reuse</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S14</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Map Field</h3>
+          <p class="card-url"><span class="mono">/map-field</span></p>
+          <p class="card-desc">Builds a field-mapping site from a newsletter or paper corpus — schools of thought, topic pages, argument maps. Pairs with the AI-in-design and AI-schools sites.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Research</span>
+            <span class="skill-tag">Content</span>
+            <span class="skill-tag">Map</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S15</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Playwright Setup</h3>
+          <p class="card-url"><span class="mono">/playwright-setup</span></p>
+          <p class="card-desc">Installs and configures Playwright for a project, writes baseline tests, wires desktop + mobile screenshot coverage per the visual-UI-check memory rule.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Testing</span>
+            <span class="skill-tag">Playwright</span>
+            <span class="skill-tag">UI</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S16</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Save Context</h3>
+          <p class="card-url"><span class="mono">/save-context</span></p>
+          <p class="card-desc">Writes a structured session snapshot to the Obsidian vault before ending a long session — the cross-machine handoff complement to <span class="mono">CURRENT-TASK.md</span>.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Session</span>
+            <span class="skill-tag">Obsidian</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S17</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Resume Context</h3>
+          <p class="card-url"><span class="mono">/resume-context</span></p>
+          <p class="card-desc">Reads the vault session snapshot written by <span class="mono">/save-context</span> and re-hydrates task state so the next session picks up cleanly without re-reading everything.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Session</span>
+            <span class="skill-tag">Obsidian</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S18</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Rollover Session</h3>
+          <p class="card-url"><span class="mono">/rollover-session</span></p>
+          <p class="card-desc">End-of-session ritual — commits any open task state, writes the vault snapshot, and closes out cleanly so tomorrow's session starts with no ambiguity.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Session</span>
+            <span class="skill-tag">Git</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S19</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Tech Debt Audit</h3>
+          <p class="card-url"><span class="mono">/tech-debt-audit</span></p>
+          <p class="card-desc">Scans a codebase for dead code, stale TODOs, and accumulated debt patterns — returns a prioritized list with effort estimates before any cleanup pass.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Audit</span>
+            <span class="skill-tag">Refactor</span>
+          </div>
+        </li>
+        <li class="card skill-invoke">
+          <div class="card-head">
+            <span class="card-num">S20</span>
+            <span class="card-stack">Claude Code Skill</span>
+          </div>
+          <h3 class="card-title">Walmart Ultrareview</h3>
+          <p class="card-url"><span class="mono">/walmart-ultrareview</span></p>
+          <p class="card-desc">Deep pre-merge code review: worktree sandbox, live app render, independent verification pass. Auto-selects deep mode for diffs touching 4+ files. Accepts a commit range.</p>
+          <div class="card-foot">
+            <span class="skill-tag">Review</span>
+            <span class="skill-tag">Security</span>
+            <span class="skill-tag">PR</span>
+          </div>
+        </li>
       </ul>
 
       <div class="subsection-head">
         <span class="subsection-label">C. Hooks &amp; Automations</span>
-        <span class="subsection-count">Seven hooks</span>
+        <span class="subsection-count">Eighteen hooks &middot; Two notifications</span>
       </div>
       <ul class="hook-list">
         <li class="hook-row">
@@ -552,6 +728,71 @@
           <span class="hook-trigger hook-trigger--session">SessionStart</span>
           <span class="hook-name">session-primer.js</span>
           <span class="hook-desc">Injects startup context so each session begins with the current workspace rules and constraints in view.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--pre">PreToolUse &middot; Bash/WebFetch</span>
+          <span class="hook-name">block-egress-exfil.js</span>
+          <span class="hook-desc">Blocks outbound requests to suspicious destinations — prevents data exfiltration via curl, fetch, or webhook calls.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--pre">PreToolUse &middot; Write/Edit</span>
+          <span class="hook-name">protect-security-config.js</span>
+          <span class="hook-desc">Guards security-critical config files (hooks, settings.json, .gitignore) from casual edits that could silently weaken the protection stack.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--pre">PreToolUse &middot; Write</span>
+          <span class="hook-name">scan-write-for-secrets.js</span>
+          <span class="hook-desc">Scans file content being written for API keys, tokens, and credential patterns before the write lands on disk.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--pre">PreToolUse &middot; Read</span>
+          <span class="hook-name">block-sensitive-file-read.js</span>
+          <span class="hook-desc">Blocks reads of sensitive paths (26_Sensitive/, AI Reference.md, .env files, .ssh/) to enforce vault and credential guardrails.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--pre">PreToolUse &middot; WebFetch</span>
+          <span class="hook-name">block-nasa-web-egress.js</span>
+          <span class="hook-desc">Restricts outbound web fetches during sessions scoped to NASA-adjacent research work.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--post">PostToolUse &middot; Bash</span>
+          <span class="hook-name">auto-schedule-codex-poll.js</span>
+          <span class="hook-desc">After Codex background tasks are dispatched, auto-schedules a wakeup poll so results are retrieved without manual follow-up.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--post">PostToolUse &middot; Bash</span>
+          <span class="hook-name">scan-output-for-secrets.js</span>
+          <span class="hook-desc">Screens shell command output for credentials or tokens before they appear in the conversation context.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--post">PostToolUse &middot; Bash</span>
+          <span class="hook-name">audit-bash-log.js</span>
+          <span class="hook-desc">Logs every shell command executed by Claude for post-session review — lightweight audit trail.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--session">UserPromptSubmit</span>
+          <span class="hook-name">task-state-reminder.js</span>
+          <span class="hook-desc">On every user message, reminds Claude to update the session task-state file — keeps CURRENT-TASK.md in sync across compactions.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--stop">Stop</span>
+          <span class="hook-name">stop-toast-gate.js</span>
+          <span class="hook-desc">Shows a toast notification when Claude finishes a turn, giving a visual signal without requiring the terminal to stay in focus.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--stop">Stop</span>
+          <span class="hook-name">double-shot-latte.js</span>
+          <span class="hook-desc">Stop hook for custom end-of-turn behavior (personal automation).</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--session">Notification</span>
+          <span class="hook-name">Windows popup · attention needed</span>
+          <span class="hook-desc">Pops a 5-second Windows dialog when Claude needs user input — useful when the terminal is backgrounded.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--session">Notification</span>
+          <span class="hook-name">Windows popup · agent complete</span>
+          <span class="hook-desc">Plays a system sound and pops a persistent dialog when a Codex or background agent finishes, with the agent's completion message.</span>
         </li>
       </ul>
     </section>
@@ -664,6 +905,143 @@
       </ul>
     </section>
 
+    <!-- ========== V. WORKFLOW LIBRARY ========== -->
+    <section class="chapter" id="workflow">
+      <h2 class="chapter-head">
+        <span class="rom-badge">V</span>
+        <span class="chapter-title">Workflow Library</span>
+        <span class="count">When to use what</span>
+      </h2>
+      <p class="chapter-intro">A decision map across the tools, skills, hooks, and memory rules I have installed — grouped by what I'm trying to do. The full catalog lives in <span class="mono">Claude Research Folder/claude-toolkit-map.md</span>; this is the "what do I reach for" view.</p>
+
+      <ul class="grid">
+        <li class="card">
+          <div class="card-head">
+            <span class="card-num">A</span>
+            <span class="card-stack">Review code</span>
+          </div>
+          <h3 class="card-title">When something needs a second pass before merge</h3>
+          <p class="card-desc">
+            <strong>Quick PR review</strong> → <span class="mono">/review</span> or <span class="mono">/codex:review</span> on the staged diff.
+            <strong>Deep pre-merge review</strong> → <span class="mono">/walmart-ultrareview main...HEAD</span> from the repo root (worktree sandbox + live render + verification pass; auto-deep-mode for ≥4 files).
+            <strong>Adversarial / pre-refactor scan</strong> → <span class="mono">/codex:adversarial-review</span>.
+            <strong>Security check</strong> → <span class="mono">/security-review</span>.
+            <strong>Whole-project audit</strong> → <span class="mono">/doctor</span> (46 checks, auto-detects maturity) or <span class="mono">/tech-debt-audit</span>.
+          </p>
+        </li>
+
+        <li class="card">
+          <div class="card-head">
+            <span class="card-num">B</span>
+            <span class="card-stack">Build something new</span>
+          </div>
+          <h3 class="card-title">First drafts, scaffolds, and starters</h3>
+          <p class="card-desc">
+            <strong>New repo / CLAUDE.md scaffold</strong> → <span class="mono">/init</span>.
+            <strong>Single-file Express + Vercel + dark/light scaffold</strong> → copy <span class="mono">site-runtime-baseline/</span>.
+            <strong>Knowledge-graph SPA</strong> → <span class="mono">/build-graph-explorer</span> (~5.6k-line reference impl).
+            <strong>Deadline / application tracker</strong> → <span class="mono">/build-tracker</span> (calendar + cards + table + map + iCal).
+            <strong>Field-mapping site from a corpus</strong> → <span class="mono">/map-field</span>.
+            <strong>Design system from scratch</strong> → <span class="mono">/hue</span> (also Codex-compatible).
+            <strong>Bulk codegen ≥200 lines from a tight brief</strong> → Codex via <span class="mono">/codex:rescue</span>.
+          </p>
+        </li>
+
+        <li class="card">
+          <div class="card-head">
+            <span class="card-num">C</span>
+            <span class="card-stack">Solve a problem</span>
+          </div>
+          <h3 class="card-title">Bugs, debugging, things that broke</h3>
+          <p class="card-desc">
+            <strong>Debug round 1</strong> → Sonnet. Read the error, read the code, propose fix.
+            <strong>Debug round 2 (already failed once)</strong> → escalate to Opus subagent — the failure looks like "didn't think hard enough," not "bad brief."
+            <strong>Long autonomous investigation</strong> → Codex with <span class="mono">--background</span>; pair with <span class="mono">ScheduleWakeup(180s)</span> polling.
+            <strong>Visual UI bug</strong> → Playwright at desktop AND mobile; per <span class="mono">feedback_visual_ui_check.md</span>, screenshot before declaring done.
+            <strong>Tech-debt cleanup</strong> → <span class="mono">/tech-debt-audit</span> first; apply findings same-session if scoped tight.
+            <strong>"Claude is going in circles"</strong> → ask for the diff and which line addresses what; force the verification path.
+          </p>
+        </li>
+
+        <li class="card">
+          <div class="card-head">
+            <span class="card-num">D</span>
+            <span class="card-stack">Research</span>
+          </div>
+          <h3 class="card-title">Find things, synthesize, write</h3>
+          <p class="card-desc">
+            <strong>Multi-step web research</strong> → <span class="mono">/deep-search</span> (query fan-out + practitioner sources + inline citations).
+            <strong>Process LinkedIn inbox</strong> → <span class="mono">/process-linkedin-inbox</span>.
+            <strong>Crawl an entire site</strong> → Firecrawl MCP.
+            <strong>Semantic search</strong> → Exa MCP (paired with Firecrawl for full content).
+            <strong>Fellowship draft critique</strong> → <span class="mono">/fellowship-review</span>.
+            <strong>Daily / weekly reflection</strong> → <span class="mono">/daily-review</span>.
+          </p>
+        </li>
+
+        <li class="card">
+          <div class="card-head">
+            <span class="card-num">E</span>
+            <span class="card-stack">Session &amp; state</span>
+          </div>
+          <h3 class="card-title">Keep work durable across sessions</h3>
+          <p class="card-desc">
+            <strong>Long task spanning compactions</strong> → write <span class="mono">CURRENT-TASK.md</span> first; the <span class="mono">task-state-reminder.js</span> hook fires on every message.
+            <strong>End of long session</strong> → <span class="mono">~/bin/rollover-session.ps1</span>.
+            <strong>Background agents / Codex</strong> → write to <span class="mono">BACKGROUND-TASKS.md</span> immediately after dispatch (per <span class="mono">feedback_background_agent_tracking.md</span>).
+            <strong>Capture a reusable pattern after a task</strong> → <span class="mono">/make-playbook</span>.
+            <strong>Recurring task</strong> → <span class="mono">/loop &lt;interval&gt; &lt;cmd&gt;</span> or <span class="mono">/schedule</span> for cron.
+            <strong>Multi-part independent work</strong> → <span class="mono">/parallelize</span>.
+          </p>
+        </li>
+
+        <li class="card">
+          <div class="card-head">
+            <span class="card-num">F</span>
+            <span class="card-stack">Documents &amp; files</span>
+          </div>
+          <h3 class="card-title">Slides, PDFs, Word, Excel, posters</h3>
+          <p class="card-desc">
+            <strong>Slides / decks</strong> → <span class="mono">anthropic-skills:pptx</span>.
+            <strong>PDFs (read, fill, sign, merge)</strong> → <span class="mono">anthropic-skills:pdf</span> + <span class="mono">pdf-viewer:*</span>.
+            <strong>Word documents (reports, memos, letters)</strong> → <span class="mono">anthropic-skills:docx</span>.
+            <strong>Spreadsheets (.xlsx, .csv, .tsv)</strong> → <span class="mono">anthropic-skills:xlsx</span>.
+            <strong>Posters / static art</strong> → <span class="mono">anthropic-skills:canvas-design</span>.
+            <strong>Themed claude.ai HTML artifacts</strong> → <span class="mono">anthropic-skills:web-artifacts-builder</span> + <span class="mono">theme-factory</span>.
+          </p>
+        </li>
+
+        <li class="card">
+          <div class="card-head">
+            <span class="card-num">G</span>
+            <span class="card-stack">Model picking</span>
+          </div>
+          <h3 class="card-title">Which model when</h3>
+          <p class="card-desc">
+            <strong>Inventory / glob sweep / status</strong> → Haiku (cheap, fast, no reasoning needed).
+            <strong>Routine implementation, single-feature change</strong> → Sonnet (default).
+            <strong>Architectural decision, hard-to-reverse refactor, debug round 2</strong> → Opus.
+            <strong>Greenfield codegen ≥200 lines from tight brief, long single-file refactor, mechanical bulk edits</strong> → Codex (GPT-5.4 / 5.5) — beats Opus for code-shaped work.
+            <strong>Brief-writing itself</strong> → always chat-side (Opus or Sonnet); never delegate the brief.
+          </p>
+        </li>
+
+        <li class="card">
+          <div class="card-head">
+            <span class="card-num">H</span>
+            <span class="card-stack">Safety &amp; verification</span>
+          </div>
+          <h3 class="card-title">Don't ship a wrong-repo or bad-credential change</h3>
+          <p class="card-desc">
+            <strong>Before any commit/push</strong> → <span class="mono">git remote -v</span> + <span class="mono">git branch --show-current</span>; quote them back. Per <span class="mono">feedback_repo_verification_before_commit.md</span>; consult <span class="mono">repo-map.md</span>.
+            <strong>Before writing a credential file</strong> → put it in <span class="mono">~/.config/&lt;project&gt;/</span>, verify with <span class="mono">git check-ignore</span>. Per <span class="mono">feedback_credential_storage.md</span>.
+            <strong>After any UI change</strong> → screenshot at desktop AND mobile; check overlap, contrast, clipping. Per <span class="mono">feedback_visual_ui_check.md</span>.
+            <strong>Long voice prompt with 5+ items</strong> → write every item verbatim to <span class="mono">CURRENT-TASK.md</span> before code. Per <span class="mono">feedback_long_prompt_discipline.md</span>.
+          </p>
+        </li>
+      </ul>
+    </section>
+
     <!-- ========== DASHBOARD VIEW (minimal) ========== -->
     <section class="dashboard" aria-label="Site dashboard">
       <div class="dash-meta">
@@ -671,9 +1049,9 @@
         <span class="dash-sep">·</span>
         <span class="dash-meta-item">6 projects</span>
         <span class="dash-sep">·</span>
-        <span class="dash-meta-item">7 skills</span>
+        <span class="dash-meta-item">20 skills</span>
         <span class="dash-sep">·</span>
-        <span class="dash-meta-item">7 hooks</span>
+        <span class="dash-meta-item">19 hooks</span>
         <span class="dash-sep">·</span>
         <span class="dash-meta-item">GitHub API</span>
         <span class="dash-sep">·</span>
@@ -936,7 +1314,7 @@
       <div class="db-section">
         <div class="db-section-head">
           <span class="db-section-title">Workflow</span>
-          <span class="db-section-count">7 skills · 6 playbooks · 7 hooks</span>
+          <span class="db-section-count">20 skills · 6 playbooks · 18 hooks</span>
         </div>
         <div class="db-tools-grid">
 
@@ -1059,7 +1437,7 @@
       </div>
       <p class="colo-line">Set in <span class="mono">Source Serif 4</span> &amp; <span class="mono">JetBrains Mono</span>.</p>
       <p class="colo-line">Hosted on Vercel. Source on GitHub. Written and maintained by Douglas McGowan.</p>
-      <p class="colo-line colo-meta"><span class="mono">v. 2026.04</span> · <a href="https://github.com/douglaspmcgowan">@douglaspmcgowan</a></p>
+      <p class="colo-line colo-meta"><span class="mono">v. 2026.05</span> · <a href="https://github.com/douglaspmcgowan">@douglaspmcgowan</a></p>
     </footer>
   </main>
   <script>
