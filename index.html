@@ -706,7 +706,7 @@
 
       <div class="subsection-head">
         <span class="subsection-label">C. Hooks &amp; Automations</span>
-        <span class="subsection-count">Eighteen hooks &middot; Two notifications</span>
+        <span class="subsection-count">Nineteen hooks &middot; Two notifications</span>
       </div>
       <ul class="hook-list">
         <li class="hook-row">
@@ -763,6 +763,11 @@
           <span class="hook-trigger hook-trigger--pre">PreToolUse &middot; Read</span>
           <span class="hook-name">block-sensitive-file-read.js</span>
           <span class="hook-desc">Blocks reads of sensitive paths (26_Sensitive/, AI Reference.md, .env files, .ssh/) to enforce vault and credential guardrails.</span>
+        </li>
+        <li class="hook-row">
+          <span class="hook-trigger hook-trigger--pre">PreToolUse &middot; Read/Obsidian</span>
+          <span class="hook-name">protect-ai-reference.js</span>
+          <span class="hook-desc">Hard-blocks any access to the AI Reference file/folder and the 26_Sensitive vault folder across Read/Grep/Glob and all Obsidian MCP tools.</span>
         </li>
         <li class="hook-row">
           <span class="hook-trigger hook-trigger--pre">PreToolUse &middot; WebFetch</span>
