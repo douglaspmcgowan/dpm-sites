@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-29",
+  "generated": "2026-07-19",
   "note": "Tracked projects for the dpm-sites landing page. GitHub-backed lastCommit values are refreshed by scripts/update-project-status.ps1.",
   "projects": [
     {
@@ -22,7 +22,7 @@
       "currentState": "Stable public map with ongoing content expansion and school-page refinement.",
       "url": "https://ai-in-design-map.vercel.app",
       "githubRepo": "ai-in-design-map",
-      "lastCommit": null
+      "lastCommit": "2026-06-01T00:00:31Z"
     },
     {
       "id": "dfm-graph-explorer",
@@ -33,7 +33,7 @@
       "currentState": "Stable explorer with recent graph and canvas iteration paths already in place.",
       "url": "https://dfm-graph-explorer.vercel.app",
       "githubRepo": "dfm-graph-explorer",
-      "lastCommit": null
+      "lastCommit": "2026-06-17T02:22:11Z"
     },
     {
       "id": "dpm-research-hub",
@@ -44,7 +44,7 @@
       "currentState": "Stable aggregation point for talks, papers, and supporting project context.",
       "url": "https://dpm-research-hub.vercel.app",
       "githubRepo": "dpm-research-hub",
-      "lastCommit": null
+      "lastCommit": "2026-04-24T17:30:14Z"
     },
     {
       "id": "idetc-paper-site",
@@ -55,7 +55,7 @@
       "currentState": "Active polish and publication support while the paper and companion materials are still moving.",
       "url": "https://idetc-paper-site.vercel.app",
       "githubRepo": "idetc-paper-site",
-      "lastCommit": null
+      "lastCommit": "2026-06-03T23:07:24Z"
     },
     {
       "id": "site-runtime-baseline",
